@@ -229,3 +229,15 @@ html {
 html {
   font-size: 125%;
 }
+
+.skipLink {
+  position: absolute;
+  left: -2000px;
+  top: 10px;
+  background-color: #FF7F50;
+  color: white;
+  z-index: 10;
+}
+.skipLink:focus {
+  left: 0;
+}
