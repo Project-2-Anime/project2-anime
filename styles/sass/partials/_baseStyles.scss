@@ -1,0 +1,11 @@
+.skipLink {
+    position: absolute;
+    left: -2000px;
+    top: 10px;
+    background-color: $primary;
+    color: white;
+    z-index: 10;
+    &:focus {
+        left: 0;
+    }
+}
