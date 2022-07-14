@@ -230,6 +230,15 @@ html {
   font-size: 125%;
 }
 
+body p {
+  font-family: "Edu SA Beginner", cursive;
+  color: #000;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 20px;
+  letter-spacing: 1px;
+}
+
 .skipLink {
   position: absolute;
   left: -2000px;
