@@ -1,0 +1,24 @@
+ul{
+    display: flex;
+    margin-top: 10px;
+    li{
+        margin: 0 20px;
+        border: 1px solid $primary;
+        background-color: $primary;
+        padding: 10px 30px;
+    }
+}
+
+.logo{
+    background-image: transparent;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 100px;
+    height: 60px;
+    img{
+            height: 100%;
+            width: 100%;
+    }
+}
+

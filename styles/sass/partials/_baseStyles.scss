@@ -16,6 +16,10 @@
     margin: 0 auto;
 }
 
+body{
+    background-image: $gradient;
+}
+
 img{
     max-width: 100%;
     display: block;
