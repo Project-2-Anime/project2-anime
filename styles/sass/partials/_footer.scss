@@ -1,4 +1,21 @@
 footer {
-    background-color: $quinary;
+    margin-top: 50px;
+    padding: 20px 10px;
+    background-color: $secondary;
+    opacity: 0.8;
     text-align: center;
+    p{
+        font-size: 1.2rem;
+    }
+    position: relative;
+}
+
+.iconContainer{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 30px;
+    i{  font-size: 2rem;
+        margin: 10px auto;
+    }
 }

@@ -1,0 +1,42 @@
+// starter page header styles 
+
+.headerParent{
+    height: 75vh;
+}
+.starterHeader{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1{
+        font-size: 5rem;
+    }
+    a{  
+        font-size: 3rem;
+        border: 1px solid salmon;
+        padding: 50px 150px;
+        background-color: salmon;
+        border-radius: 5%;
+    }
+}
+
+.carouselFlexChild{
+    border: 1px solid red;
+
+}
+.carouselFlexChild img{
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+.starterMain{
+    height: 60vh;
+    margin-top: 50px;
+}
+
+.carouselFlexParent{
+    display: flex;
+    justify-content: center;
+}

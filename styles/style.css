@@ -318,6 +318,29 @@ li:hover,
 }
 
 button {
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+}
+button:hover,
+button :focus,
+button :active {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: pink;
+  background-color: cyan;
+}
+
+.starterHeader a:hover,
+:focus {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: pink;
+  background-color: cyan;
+}
+
+button {
   font-size: 1.5rem;
   font-family: "Edu SA Beginner", cursive;
   background-color: #FF8C00;
@@ -326,6 +349,60 @@ button {
   border-radius: 20%;
   cursor: pointer;
   text-transform: uppercase;
+}
+
+.headerParent {
+  height: 75vh;
+}
+
+.starterHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.starterHeader h1 {
+  font-size: 5rem;
+}
+.starterHeader a {
+  font-size: 3rem;
+  border: 1px solid salmon;
+  padding: 50px 150px;
+  background-color: salmon;
+  border-radius: 5%;
+}
+
+.carouselFlexChild {
+  border: 1px solid red;
+}
+
+.carouselFlexChild img {
+  border: 1px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.starterMain {
+  height: 60vh;
+  margin-top: 50px;
+}
+
+.carouselFlexParent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 ul {
@@ -339,6 +416,9 @@ ul li {
   border: 1px solid #FF7F50;
   background-color: #FF7F50;
   padding: 10px 30px;
+}
+ul a {
+  font-size: 1.2rem;
 }
 
 .logo {
@@ -358,6 +438,9 @@ ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
@@ -367,8 +450,67 @@ ul li {
   padding: 0;
   width: calc(50% - 20px);
 }
+.flexParent .flexImg {
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+}
+
+.flexChild {
+  max-height: 600px;
+}
+.flexChild img {
+  width: 100%;
+  max-height: 500px;
+  height: inherit;
+}
+
+select {
+  width: 65%;
+  padding-top: 20px;
+  margin-left: 28px;
+}
+
+.animeSelect {
+  background-color: transparent;
+  border: none;
+}
+.animeSelect:hover {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.flexFact p {
+  text-align: center;
+  margin-top: 20%;
+  font-size: 1.5rem;
+  line-height: 35px;
+  letter-spacing: 2px;
+}
 
 footer {
-  background-color: #000;
+  margin-top: 50px;
+  padding: 20px 10px;
+  background-color: #FFA07A;
+  opacity: 0.8;
   text-align: center;
+  position: relative;
+}
+footer p {
+  font-size: 1.2rem;
+}
+
+.iconContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  bottom: 30px;
+}
+.iconContainer i {
+  font-size: 2rem;
+  margin: 10px auto;
 }
