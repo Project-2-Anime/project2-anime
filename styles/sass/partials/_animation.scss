@@ -1,0 +1,15 @@
+li{
+    transition: transform 0.9s;
+}
+
+li:hover,
+:focus{
+transform: scale(0.8);
+}
+
+.logo{
+    transition: transform 0.8s;
+}
+.logo:hover{
+    transform: rotate(90deg);
+}
