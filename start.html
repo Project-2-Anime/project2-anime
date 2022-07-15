@@ -17,9 +17,9 @@
     <a href="#mainContent" class="skipLink">Skip to main content.</a>
     
     <!-- START Header section -->
-    <header>
+    <header class="headerParent">
         <!-- START wrapper -->
-        <div class="wrapper">
+        <div class="wrapper starterHeader">
             <h1>Anime</h1>
             <p>Created By: Jingru Xu & Elijah Walker</p>
             <a href="./index.html">Start</a>
@@ -28,15 +28,15 @@
     </header>
 
     <!-- START Main -->
-    <main>
+    <main class="starterMain">
         <section>
             <!-- START wrapper -->
             <div class="wrapper">
                 <!-- START flex Container -->
                 <div class="carouselFlexParent">
-                    <div> 
+                    <div class="carouselFlexChild"> 
                         <!-- images to append from api in carousel -->
-                        <img src="" alt="">
+                        <img src="https://placebear.com/200/300" alt="">
                     </div>
                     <div>
                         <!-- FIGURE OUT WETHER TO USE ANCHOR TAGS OR BUTTON -->
@@ -48,23 +48,28 @@
         </section>
     </main>
 
-    <!-- START footer -->
-    <footer>
-        <!-- START wrapper -->
-        <div class="wrapper">
+<!-- START footer -->
+<footer id="contact">
+    <!-- START wrapper -->
+    <div class="wrapper">
+        <p>
             Created at <a href="https://junocollege.com/" target="_blank" rel="noopener">Juno College of Technology</a>
-            <p>Data courtesy to <a href="https://developers.giphy.com/" target="_blank" rel="noopener">Giphy Api</a></p>
-        
-            <p>Data courtesy to <a href="https://chandan-02.github.io/anime-facts-rest-api/" target="_blank"
-                    rel="noopener">Anime Facts Api</a></p>
-    
+        </p>
+
+        <p>Data courtesy to <a href="https://developers.giphy.com/" target="_blank" rel="noopener">Giphy Api</a></p>
+
+        <p>Data courtesy to <a href="https://chandan-02.github.io/anime-facts-rest-api/" target="_blank"
+                rel="noopener">Anime Facts Api</a></p>
+
+        <div class="iconContainer">
             <a href="www.google.com"><i class="fa-brands fa-github"></i></a>
-            
+
             <a href=""><i class="fa-solid fa-desktop"></i></a>
+
         </div>
-        <!-- END wrapper -->
-    </footer>
-    <!-- END footer -->
+    </div>
+    <!-- END wrapper -->
+</footer>
 
     <!-- Linking to JS page -->
     <script src="scripts.js"></script>

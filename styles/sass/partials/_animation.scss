@@ -24,3 +24,11 @@ button{
         background-color: cyan;
     }
 }
+
+.starterHeader a:hover,
+:focus{
+    transform: scale(1.2);
+    color: pink;
+    background-color: cyan;
+}
+
