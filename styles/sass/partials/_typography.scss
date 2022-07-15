@@ -3,8 +3,8 @@ html{
 }
 
 body{
+    font-family: $baseFont;
     p{
-        font-family:$baseFont;
         color: $quinary;
         font-weight: normal;
         font-size: 1rem;
@@ -12,6 +12,18 @@ body{
         letter-spacing: 1px;
     }
 }
+
+h1{
+    font-family: $headingFont;
+    color: $secondary;
+    font-size: 3rem;
+    text-align: center;
+}
+
+a{
+    color: blue;
+}
+
 
 
 

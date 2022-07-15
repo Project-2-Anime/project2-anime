@@ -230,13 +230,26 @@ html {
   font-size: 125%;
 }
 
-body p {
+body {
   font-family: "Edu SA Beginner", cursive;
+}
+body p {
   color: #000;
   font-weight: normal;
   font-size: 1rem;
   line-height: 20px;
   letter-spacing: 1px;
+}
+
+h1 {
+  font-family: "Permanent Marker", cursive;
+  color: #FFA07A;
+  font-size: 3rem;
+  text-align: center;
+}
+
+a {
+  color: blue;
 }
 
 .skipLink {
@@ -257,11 +270,6 @@ body p {
   margin: 0 auto;
 }
 
-footer {
-  background-color: #000;
-  text-align: center;
-}
-
 img {
   max-width: 100%;
   display: block;
@@ -277,4 +285,9 @@ a {
 
 ul {
   list-style: none;
+}
+
+footer {
+  background-color: #000;
+  text-align: center;
 }
