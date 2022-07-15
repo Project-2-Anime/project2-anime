@@ -1,5 +1,6 @@
 .flexParent{
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     width: 100%;
     .flexChild{
@@ -7,5 +8,44 @@
         padding: 0;
         width: calc((100% / 2) - 20px);
     }
+
+    .flexImg{
+        flex-basis: 35%;
+    }
 }
 
+.flexChild{
+    max-height: 600px;
+
+    img{
+        width: 100%;
+        max-height: 500px;
+        height: inherit;
+    }
+}
+
+// select styles 
+
+select{
+    width: 65%;
+    padding-top: 20px;
+    margin-left: 28px;
+
+}
+
+.animeSelect{
+    background-color: transparent;
+    border: none;
+    &:hover{
+        transform: none;
+    }
+}
+
+// style for the anime facts 
+.flexFact p{
+    text-align: center;
+    margin-top: 20%;
+    font-size: 1.5rem;
+    line-height: 35px;
+    letter-spacing: 2px;
+}

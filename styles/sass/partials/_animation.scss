@@ -13,3 +13,14 @@ transform: scale(0.8);
 .logo:hover{
     transform: rotate(90deg);
 }
+
+button{
+    transition: transform 0.8s;
+    &:hover,
+    :focus,
+    :active{
+        transform: scale(1.2);
+        color: pink;
+        background-color: cyan;
+    }
+}
