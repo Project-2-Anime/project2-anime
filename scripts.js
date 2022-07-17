@@ -20,37 +20,85 @@
 
 
 
-fetch('https://anime-facts-rest-api.herokuapp.com/api/v1/')
+// 1.Name space Object
+const app = {};
+
+// 2.Init Method
+app.init = () => {
+    //3. testing to see if it works
+    console.log('Readyyyy!');
+    // testing to see if our ajax calls work, will be placing this somewhere else
+    app.image();
+    app.getGiphy();
+}
+
+// 5. storing giphy url & key and endpoints in a variable
+app.key = "t8X2oWyUsOd7Av7mL68TZYYSycOpELUs";
+app.url =  "https://api.giphy.com/v1/gifs/search";
+//8. Create a function that will queryselector the user input option, and pass it into a variable
+app.nameSelected = ""
+// variable for option drop down to be appended to select
+
+
+
+//6.  Create a method to hold our AJAX Call for images
+app.image = () => {
+    fetch('https://anime-facts-rest-api.herokuapp.com/api/v1/')
     .then(function (resp) {
         return resp.json();
     })
-    .then(function (result) {
-        const newArray = result.data[0].anime_img;
-        console.log(newArray)
+        .then(function (result) {
+            const newArray = result.data;
+            console.log(newArray);
+
+            // CURRENTdisplaying our array names and id onto our select options.
+            const option = document.querySelector('select');
+            const dropDown = newArray.map((result) => {
+                return `<option value="${result.anime_id}">${result.anime_name}</option>`
+            }) 
+            option.innerHTML = dropDown;
+        })
+}
+// 7. Create a method to hold our AJAX call with a different endpoint (facts)
+app.facts = () => {
+    fetch(`https://anime-facts-rest-api.herokuapp.com/api/v1/${app.nameSelected}`)
+        .then(function (resp) {
+            return resp.json();
+        })
+        .then(function (result) {
+            const newArray = result.data;
+            console.log(newArray)
+        })
+}
+
+//9. Create a method to hold our AJAX call for Giphy
+app.getGiphy = () => {
+    // 10. ADD a parameter so that when we call it, we can pass an argument ()
+    const url = new URL(app.url);
+
+    //11.  target the "search" property of this object
+    url.search = new URLSearchParams({
+        api_key: app.key,
+        q: 'bleach',  // q: `${userAnimeSelection} anime`,
+        limit: 10,
+        format: 'json'
+    });
+    
+    fetch(url).then(function (result) {
+        return (result.json())
     })
+        .then(function (result) {
+            console.log(result.data)
+        })
+
+
+}
 
 
 
-// store API key in our app object for easy access later on !
-const key = "t8X2oWyUsOd7Av7mL68TZYYSycOpELUs";
 
 // Create a method in our app object to hold our Ajax call and Then method -> see init() definition to CALL our getImages method
 
-// ADD a parameter to our getImage method so that when we call it, we can pass an argument ()
-const url = new URL('https://api.giphy.com/v1/gifs/search');
 
-// target the "search" property of this object
-// we will define the parameters we want as an object with the new URLSearchParams syntax
-url.search = new URLSearchParams({
-    api_key: key,
-    q: 'bleach',  // q: `${userAnimeSelection} anime`,
-    limit: 10,
-    format: 'json'
-});
-// now our url variable contains those 4 params as a query string
-fetch(url).then(function (result) {
-    return (result.json())
-})
-    .then(function (result) {
-        console.log(result.data)
-    })
+// 4. Calling out Init function
+app.init();

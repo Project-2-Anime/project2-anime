@@ -25,4 +25,15 @@ ul{
     }
 }
 
+input[type=checkbox]{
+    opacity: 0;
+    &:focus+label {
+            border: 1px dotted $primary;
+            color: purple;
+        }
 
+}
+
+.showMe{
+    visibility: hidden;
+}
