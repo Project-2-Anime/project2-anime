@@ -292,6 +292,11 @@ ul {
   list-style: none;
 }
 
+label {
+  margin-left: 30px;
+  font-size: 1.5rem;
+}
+
 li {
   -webkit-transition: -webkit-transform 0.9s;
   transition: -webkit-transform 0.9s;
@@ -468,6 +473,7 @@ select {
   width: 65%;
   padding-top: 20px;
   margin-left: 28px;
+  margin-top: 20px;
 }
 
 .animeSelect {
@@ -513,4 +519,124 @@ footer p {
 .iconContainer i {
   font-size: 2rem;
   margin: 10px auto;
+}
+
+@media (max-width: 1000px) {
+  .animeSelect select {
+    width: 50%;
+    padding-top: 15px;
+  }
+  .animeSelect button {
+    font-size: 1.3rem;
+    padding: 10px 10px;
+  }
+  .flexFact p {
+    font-size: 1.2rem;
+  }
+  label {
+    font-size: 1.2rem;
+  }
+  .starterHeader a {
+    font-size: 2.5rem;
+    border: 1px solid salmon;
+    padding: 40px 120px;
+  }
+}
+@media (max-width: 700px) {
+  .animeSelect select {
+    padding-top: 10px;
+    width: 100%;
+    margin: 20px 0 0 0;
+  }
+  .animeSelect button {
+    margin-top: 20px;
+    font-size: 1rem;
+    padding: 10px 10px;
+  }
+  .flexFact p {
+    font-size: 1rem;
+    line-height: 30px;
+  }
+  label {
+    margin: 0;
+  }
+  .starterHeader a {
+    font-size: 2.5rem;
+    border: 10px inset salmon;
+    border-radius: 40%;
+    padding: 40px 120px;
+  }
+  footer p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 500px) {
+  .animeSelect select {
+    padding-top: 10px;
+  }
+  .animeSelect button {
+    font-size: 1rem;
+    padding: 10px 10px;
+  }
+  .flexParent {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .iconContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: absolute;
+    bottom: 1px;
+    left: 40%;
+  }
+  .iconContainer i {
+    font-size: 1.2rem;
+    margin: 5px 10px;
+  }
+}
+@media (max-width: 330px) {
+  label {
+    font-size: 1rem;
+  }
+  .starterHeader h1 {
+    font-size: 3.5rem;
+  }
+  .starterHeader a {
+    font-size: 2.5rem;
+    border: 10px inset salmon;
+    border-radius: 40%;
+    padding: 20px 50px;
+  }
+  .starterHeader p {
+    font-size: 0.8rem;
+  }
+  .iconContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: absolute;
+    bottom: 1px;
+    left: 35%;
+  }
+  .iconContainer i {
+    font-size: 1.2rem;
+    margin: 5px 10px;
+  }
+  footer p {
+    font-size: 0.8rem;
+  }
 }
