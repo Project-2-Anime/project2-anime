@@ -18,8 +18,6 @@
 //have a gif display into empty html container from what user selected
 
 
-
-
 // 1.Name space Object
 const app = {};
 
@@ -32,15 +30,14 @@ app.init = () => {
     app.getGiphy();
     app.facts();
     app.events();
-    number();
 }
 
 // Global for loop that we will use to select our images from the drop down.
-// const number = () => {
-//     for (let step = 0; step < 13; step++) {
-//         console.log(step);
-//     }
-// }
+const number = () => {
+    for (let step = 0; step < 5; step++) {
+        console.log(step);
+    }
+}
 
 // 5. storing giphy url & key and endpoints in a variable
 app.key = "t8X2oWyUsOd7Av7mL68TZYYSycOpELUs";
@@ -72,11 +69,11 @@ app.image = () => {
             document.querySelector('.flexImg').innerHTML = `<img src=${newArray}>`
             
             // displaying our array names and id onto our select options.
-            // const option = document.querySelector('select');
-            // const dropDown = result.data.map((result) => {
-            //     return `<option value="${number()}">${result.anime_name}</option>`;
-            // }) 
-            // option.innerHTML = dropDown; 
+            const option = document.querySelector('select');
+            const dropDown = result.data.map((result) => {
+                return `<option value="${result.anime_id}">${result.anime_name}</option>`;
+            }) 
+            option.innerHTML = dropDown; 
         })
 }
 
@@ -93,7 +90,6 @@ app.image = () => {
     
 //     imgParent.appendChild(img);
 // }
-
 
 
 
@@ -130,23 +126,14 @@ app.getGiphy = () => {
             console.log(result.data)
             // append to our empty div
         })
-
-
 }
 
 // 10. Creating an event listener for our button to call the image function and append to our empty div
 app.events = function(){
     document.querySelector('button').addEventListener('submit', function(){
-        
         console.log(this);
     })
 }
-
-// 2 functions inside our event listener. 
-//1. look at the id / value that the user is selected on
-//2. find the corresponding index of the url and append it to the page
-
-//1b. create a new array that only hold the url of the images 
 
 
 
