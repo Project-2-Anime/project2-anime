@@ -32,7 +32,15 @@ app.init = () => {
     app.getGiphy();
     app.facts();
     app.events();
+    number();
 }
+
+// Global for loop that we will use to select our images from the drop down.
+// const number = () => {
+//     for (let step = 0; step < 13; step++) {
+//         console.log(step);
+//     }
+// }
 
 // 5. storing giphy url & key and endpoints in a variable
 app.key = "t8X2oWyUsOd7Av7mL68TZYYSycOpELUs";
@@ -51,24 +59,24 @@ app.image = () => {
             const newArray = result.data[1].anime_img;
             // console.log(newArray);
 
-
-            // NEW ARRAY on displaying our images
+            // START A NEW ARRAY to display ONLY our images
             const imgArray = [];
-        
-            result.data.forEach((item, index) => {
-                imgArray.push(item[index].anime_img)
-                console.log(imgArray);
+
+            result.data.forEach((item) => {
+                imgArray.push(item.anime_img)
             })
+            console.log(imgArray);
+            // END our new array
 
             // Displaying our images onto the empty div
             document.querySelector('.flexImg').innerHTML = `<img src=${newArray}>`
             
             // displaying our array names and id onto our select options.
-            const option = document.querySelector('select');
-            const dropDown = result.data.map((result) => {
-                return `<option value="${result.anime_id}">${result.anime_name}</option>`;
-            }) 
-            option.innerHTML = dropDown; 
+            // const option = document.querySelector('select');
+            // const dropDown = result.data.map((result) => {
+            //     return `<option value="${number()}">${result.anime_name}</option>`;
+            // }) 
+            // option.innerHTML = dropDown; 
         })
 }
 
