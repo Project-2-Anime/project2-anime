@@ -30,6 +30,8 @@ app.init = () => {
     // testing to see if our ajax calls work, will be placing this somewhere else
     app.image();
     app.getGiphy();
+    app.facts();
+    app.events();
 }
 
 // 5. storing giphy url & key and endpoints in a variable
@@ -39,8 +41,6 @@ app.url =  "https://api.giphy.com/v1/gifs/search";
 app.nameSelected = ""
 // variable for option drop down to be appended to select
 
-
-
 //6.  Create a method to hold our AJAX Call for images
 app.image = () => {
     fetch('https://anime-facts-rest-api.herokuapp.com/api/v1/')
@@ -48,17 +48,47 @@ app.image = () => {
         return resp.json();
     })
         .then(function (result) {
-            const newArray = result.data;
-            console.log(newArray);
+            const newArray = result.data[1].anime_img;
+            // console.log(newArray);
 
-            // CURRENTdisplaying our array names and id onto our select options.
+
+            // NEW ARRAY on displaying our images
+            const imgArray = [];
+        
+            result.data.forEach((item, index) => {
+                imgArray.push(item[index].anime_img)
+                console.log(imgArray);
+            })
+
+            // Displaying our images onto the empty div
+            document.querySelector('.flexImg').innerHTML = `<img src=${newArray}>`
+            
+            // displaying our array names and id onto our select options.
             const option = document.querySelector('select');
-            const dropDown = newArray.map((result) => {
-                return `<option value="${result.anime_id}">${result.anime_name}</option>`
+            const dropDown = result.data.map((result) => {
+                return `<option value="${result.anime_id}">${result.anime_name}</option>`;
             }) 
-            option.innerHTML = dropDown;
+            option.innerHTML = dropDown; 
         })
 }
+
+// POSSIBLE TO NEED THIS SECTION LATER 
+// app.displayPicture = function(pic){
+
+//     console.log(pic);
+//     // display our image onto the empty div container
+//     const img = document.createElement('img');
+//     img.src = newArray.anime_img;
+//     // img.alt = 
+    
+//     const imgParent = document.querySelector('#animePicture');
+    
+//     imgParent.appendChild(img);
+// }
+
+
+
+
 // 7. Create a method to hold our AJAX call with a different endpoint (facts)
 app.facts = () => {
     fetch(`https://anime-facts-rest-api.herokuapp.com/api/v1/${app.nameSelected}`)
@@ -68,6 +98,7 @@ app.facts = () => {
         .then(function (result) {
             const newArray = result.data;
             console.log(newArray)
+            // append this to our empty div
         })
 }
 
@@ -89,15 +120,26 @@ app.getGiphy = () => {
     })
         .then(function (result) {
             console.log(result.data)
+            // append to our empty div
         })
 
 
 }
 
+// 10. Creating an event listener for our button to call the image function and append to our empty div
+app.events = function(){
+    document.querySelector('button').addEventListener('submit', function(){
+        
+        console.log(this);
+    })
+}
 
+// 2 functions inside our event listener. 
+//1. look at the id / value that the user is selected on
+//2. find the corresponding index of the url and append it to the page
 
+//1b. create a new array that only hold the url of the images 
 
-// Create a method in our app object to hold our Ajax call and Then method -> see init() definition to CALL our getImages method
 
 
 // 4. Calling out Init function
