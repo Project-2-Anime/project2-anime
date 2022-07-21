@@ -25,13 +25,17 @@ app.imgArray = [];
 // 18. create a new array to hold the image ID for alt tags 
 app.altArray = [];
 // 6. variable to hold our DOM selected element
-app.animePicture = document.querySelector('#animePicture')
+app.animePicture = document.querySelector('#animePicture');
 
-// variable to hold the DOM selected li .flexFacts
-app.animeFacts = document.querySelector('.flexFact div')
+//6b. variable to hold the DOM selected li .flexFacts
+app.animeFacts = document.querySelector('.flexFact div');
 
-// WHERE WE LEFT OUT, TRYING TO TARGET OUR FACTS
-// 17. Create a variable to target the user selection value from our options that only look at the string
+// 29. variable to hold our selected element
+app.animeGif = document.querySelector('#giphyImage');
+
+// 24. storing giphy url & key and endpoints in a variable
+app.key = "t8X2oWyUsOd7Av7mL68TZYYSycOpELUs";
+app.url = "https://api.giphy.com/v1/gifs/search";
 
 
 
@@ -62,9 +66,6 @@ app.facts = (userValue) => {
 
 }
 
-// END OUR FACTS AJAX CALL
-
-
 // 5. Creating a method to hold our AJAX call for images
 app.getImage = function () {
     fetch('https://anime-facts-rest-api.herokuapp.com/api/v1')
@@ -80,6 +81,46 @@ app.getImage = function () {
             })
         })
 }
+//25. Create a method to hold our AJAX call for Giphy
+app.getGiphy = (userGiphy) => {
+    //27. ADD a parameter so that when we call it, we can pass an argument ()
+    const url = new URL(app.url);
+    //26.  target the "search" property of this object
+    url.search = new URLSearchParams({
+        api_key: app.key,
+        // 28. Pass our parameter as an argument into our q
+        q: `${userGiphy} anime`,
+        limit: 2,
+        format: 'json'
+    });
+
+    fetch(url).then(function (result) {
+        return (result.json())
+    })
+        .then(function (result) {
+            app.displayGiphy(result.data);
+            // console.log(result.data)
+            // append to our empty div
+        })
+}
+
+// 30. create a method to display our giphy images onto the empty div.
+
+app.displayGiphy = function (gifSelected) {
+gifSelected.forEach((singleGiphy) => {
+    //   31. Made a variable that hold our created img element
+    const gif = document.createElement('img');
+    gif.src = singleGiphy.images.original.url;
+    gif.alt = singleGiphy.title;
+    app.animeGif.appendChild(gif);
+    
+})
+
+    // app.animeGif.appendChild(img);
+}
+
+// call this in an event listener
+// app.animeGif.innerHTML = '';
 
 // 9. Created a method to display our images and append to the empty div.
 app.displayImage = function (imgSelected,altSource) {
@@ -111,7 +152,6 @@ app.events = function () {
         // 17. Create a variable to target the user selection value from our options that only look at the string
         const valueOne = document.querySelector('#anime').value.split(',')[1];
 
-
         // 14. make sure our empty div is cleared before each call
         app.animePicture.innerHTML = '';
         // 15.called our method that displays the image and pass our user selection into it. 
@@ -119,44 +159,13 @@ app.events = function () {
         // 22.called the facts API and passed the valueOne as the argument 
         app.animeFacts.innerHTML = '';
         app.facts(valueOne);
-
-
+        // 32. create a variable to hold our selected value that we want our giphy to target
+        const animeGiphy = document.querySelector('#anime').value.split(',')[2];
+        // 33. Clear our our div every time a new gif is selected
+        app.animeGif.innerHTML = '';
+        // 34. call our giphy and pass it the variable we created
+        app.getGiphy(animeGiphy);
     })
 }
 // 3. Called our init method
 app.init();
-
-
-
-
-
-
-
-// START OUR GIPHY AJAX CALL 
-
-// 16. storing giphy url & key and endpoints in a variable
-// app.key = "t8X2oWyUsOd7Av7mL68TZYYSycOpELUs";
-// app.url = "https://api.giphy.com/v1/gifs/search";
-
-// //9. Create a method to hold our AJAX call for Giphy
-// app.getGiphy = () => {
-//     // 10. ADD a parameter so that when we call it, we can pass an argument ()
-//     const url = new URL(app.url);
-
-//     //11.  target the "search" property of this object
-//     url.search = new URLSearchParams({
-//         api_key: app.key,
-//         q: 'bleach',  // q: `${userAnimeSelection} anime`,
-//         limit: 10,
-//         format: 'json'
-//     });
-
-//     fetch(url).then(function (result) {
-//         return (result.json())
-//     })
-//         .then(function (result) {
-//             console.log(result.data)
-//             // append to our empty div
-//         })
-// }
-// END OUR GIPHY AJAX CALL
