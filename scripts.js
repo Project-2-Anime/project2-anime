@@ -159,43 +159,13 @@ app.events = function () {
         // 22.called the facts API and passed the valueOne as the argument 
         app.animeFacts.innerHTML = '';
         app.facts(valueOne);
-
-        app.animeGif.innerHTML = '';
-
+        // 32. create a variable to hold our selected value that we want our giphy to target
         const animeGiphy = document.querySelector('#anime').value.split(',')[2];
+        // 33. Clear our our div every time a new gif is selected
+        app.animeGif.innerHTML = '';
+        // 34. call our giphy and pass it the variable we created
         app.getGiphy(animeGiphy);
-    
-
-
     })
 }
- 
-
-
-
-
-
 // 3. Called our init method
 app.init();
-
-
-
-
-
-
-
-
-
-
-// app.displayGiphy = function (gifSelected, altGifSource) {
-//     //   10. Made a variable that hold our created img element
-//     const gif = document.createElement('img');
-//     img.src = gifSelected;
-//     img.alt = altGifSource;
-//     app.animeGif.appendChild(img);
-// }
-
-// call this in an event listener
-// app.animeGif.innerHTML = '';
-
-// app.displayGiphy();
