@@ -18,6 +18,7 @@
 //have a gif display into empty html container from what user selected
 
 
+
 // 1.Name space Object
 const app = {};
 //7.  Created a new array to hold our images
@@ -36,8 +37,6 @@ app.animeGif = document.querySelector('#giphyImage');
 // 24. storing giphy url & key and endpoints in a variable
 app.key = "t8X2oWyUsOd7Av7mL68TZYYSycOpELUs";
 app.url = "https://api.giphy.com/v1/gifs/search";
-
-
 
 // 2.Init Method
 app.init = () => {
@@ -75,8 +74,7 @@ app.getImage = function () {
                 return api.json();
             } else {
                 throw new Error(api.statusText)
-            }
-            
+            } 
         })
         // 8. pushed our image urls into our new array
         .then(function (jsonData) {
@@ -92,7 +90,6 @@ app.getImage = function () {
             } else {
                 alert("Something went wrong and we have no idea")
             }
-
         })
 }
 // END OUR IMAGES AJAX CALL
@@ -160,8 +157,8 @@ app.displayFacts = function(factSelected){
     app.animeFacts.innerText = factSelected;
     // app.animeFacts.append(factEl);
 }
-// START EVENT LISTENER 
 
+// START EVENT LISTENER FOR MAIN PAGE
 // 11. Created an event listener of change onto our select dropdown
 app.events = function () {
     document.querySelector('#anime').addEventListener('change', function () {
@@ -188,7 +185,7 @@ app.events = function () {
         app.getGiphy(animeGiphy);
     });
 }
-// END EVENT LISTENER
+// END EVENT LISTENER FOR MAIN PAGE
 
 // 3. Called our init method
 app.init();
