@@ -50,7 +50,7 @@
     <!--START Header Content -->
     <header>
         <div class="wrapper">
-            <h1>Lorem ipsum dolor sit amet.</h1>
+            <h1>Welcome to The Anime Selection</h1>
         </div>
     </header>
 
@@ -63,7 +63,7 @@
                         <label for="anime">Please select the Anime Name from the dropdown menu:</label>
                         <select name="anime" id="anime">
                             <!-- anime names to be shown through JavaScript -->
-                            <option value="xxx" disabled selected> Please Choose an Anime </option>
+                            <option value="xxx" disabled selected> Choose an Anime </option>
                             <option value="0,bleach,bleach">Bleach</option>
                             <option value="1,black_clover,black clover">Black Clover</option>
                             <option value="2,dragon_ball, dragon ball">Dragon Ball</option>
@@ -89,19 +89,19 @@
                 </li>
 
                 <li class="flexChild flexFact">
-                    <div>
+                    <div class="factAnime">
                         <!-- Empty div where random fact will append -->
                         <p id="factDisplay">A fun fact of the Anime you selected will be displayed here!</p>
 
                     </div>
                 </li>
 
-                <li class="flexChild flexImg">
-                    <div id="giphyImage">
+                <li class="flexChild flexImg gifImgLi">
+                    <div id="giphyImage" class="gifImage">
                         <!-- Empty div where random Giphy GIF will append  -->
-                        <iframe src="https://giphy.com/embed/RhPlRgkE8mvE4" width="213" height="600" frameBorder="0" class="giphy-embed"
-                            allowFullScreen></iframe>
-
+                    <iframe src="https://giphy.com/embed/ayMW3eqvuP00o" frameBorder="0" class="giphy-embed"
+                        allowFullScreen></iframe>
+                        
                     </div>
                 </li>
             </ul>

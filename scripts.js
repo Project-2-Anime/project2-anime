@@ -18,6 +18,7 @@
 //have a gif display into empty html container from what user selected
 
 
+
 // 1.Name space Object
 const app = {};
 //7.  Created a new array to hold our images
@@ -36,8 +37,6 @@ app.animeGif = document.querySelector('#giphyImage');
 // 24. storing giphy url & key and endpoints in a variable
 app.key = "t8X2oWyUsOd7Av7mL68TZYYSycOpELUs";
 app.url = "https://api.giphy.com/v1/gifs/search";
-
-
 
 // 2.Init Method
 app.init = () => {
@@ -62,8 +61,10 @@ app.facts = (userValue) => {
 
             app.displayFacts(factArray)
         })
-
 }
+// END Facts AJAX CALL
+
+// START OUR IMAGES AJAX CALL
 
 // 5. Creating a method to hold our AJAX call for images
 app.getImage = function () {
@@ -73,8 +74,7 @@ app.getImage = function () {
                 return api.json();
             } else {
                 throw new Error(api.statusText)
-            }
-            
+            } 
         })
         // 8. pushed our image urls into our new array
         .then(function (jsonData) {
@@ -90,9 +90,12 @@ app.getImage = function () {
             } else {
                 alert("Something went wrong and we have no idea")
             }
-
         })
 }
+// END OUR IMAGES AJAX CALL
+
+// START OUR GIPHY AJAX CALL
+
 //25. Create a method to hold our AJAX call for Giphy
 app.getGiphy = (userGiphy) => {
     //27. ADD a parameter so that when we call it, we can pass an argument ()
@@ -127,25 +130,18 @@ app.getGiphy = (userGiphy) => {
             }
         })
 }
+// END GIPHY AJAX CALL
 
 // 30. create a method to display our giphy images onto the empty div.
-
 app.displayGiphy = function (gifSelected) {
-gifSelected.forEach((singleGiphy) => {
-    //   31. Made a variable that hold our created img element
-    const gif = document.createElement('img');
-    gif.src = singleGiphy.images.original.url;
-    gif.alt = singleGiphy.title;
-    app.animeGif.appendChild(gif);
-    
-})
-
-    // app.animeGif.appendChild(img);
+    gifSelected.forEach((singleGiphy) => {
+        //   31. Made a variable that hold our created img element
+        const gif = document.createElement('img');
+        gif.src = singleGiphy.images.original.url;
+        gif.alt = singleGiphy.title;
+        app.animeGif.appendChild(gif);
+    });
 }
-
-// call this in an event listener
-// app.animeGif.innerHTML = '';
-
 // 9. Created a method to display our images and append to the empty div.
 app.displayImage = function (imgSelected,altSource) {
 //   10. Made a variable that hold our created img element
@@ -162,6 +158,7 @@ app.displayFacts = function(factSelected){
     // app.animeFacts.append(factEl);
 }
 
+// START EVENT LISTENER FOR MAIN PAGE
 // 11. Created an event listener of change onto our select dropdown
 app.events = function () {
     document.querySelector('#anime').addEventListener('change', function () {
@@ -171,11 +168,8 @@ app.events = function () {
         const userPicture = app.imgArray[userSelection];
         // 20. created a variable to hold the user selected value from the app.altArray array 
         const userAlt = app.altArray[userSelection];
-
-        // WHERE WE LEFT OUT, TRYING TO TARGET OUR FACTS
         // 17. Create a variable to target the user selection value from our options that only look at the string
         const valueOne = document.querySelector('#anime').value.split(',')[1];
-
         // 14. make sure our empty div is cleared before each call
         app.animePicture.innerText = '';
         // 15.called our method that displays the image and pass our user selection into it. 
@@ -189,7 +183,9 @@ app.events = function () {
         app.animeGif.innerHTML = '';
         // 34. call our giphy and pass it the variable we created
         app.getGiphy(animeGiphy);
-    })
+    });
 }
+// END EVENT LISTENER FOR MAIN PAGE
+
 // 3. Called our init method
 app.init();

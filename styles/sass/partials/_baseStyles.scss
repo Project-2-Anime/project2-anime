@@ -17,7 +17,7 @@
 }
 
 body{
-    background-image: $gradient;
+    background-color: $primary;
 }
 
 img{
@@ -38,7 +38,9 @@ ul{
 }
 
 label{
-    margin-left: 30px;
+    margin-left: 0px;
     font-size: 1.5rem;
+    color: $tertiary;
 }
+
 
