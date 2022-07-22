@@ -28,7 +28,7 @@ app.altArray = [];
 app.animePicture = document.querySelector('#animePicture');
 
 //6b. variable to hold the DOM selected li .flexFacts
-app.animeFacts = document.querySelector('.flexFact div');
+app.animeFacts = document.querySelector('#factDisplay');
 
 // 29. variable to hold our selected element
 app.animeGif = document.querySelector('#giphyImage');
@@ -44,7 +44,6 @@ app.init = () => {
     //4. testing to see if init works
     app.getImage();
     app.events();
-    app.facts();
 }
 
 // START OUR FACTS AJAX CALL
@@ -70,7 +69,12 @@ app.facts = (userValue) => {
 app.getImage = function () {
     fetch('https://anime-facts-rest-api.herokuapp.com/api/v1')
         .then(function (api) {
-            return api.json();
+            if(api.ok){
+                return api.json();
+            } else {
+                throw new Error(api.statusText)
+            }
+            
         })
         // 8. pushed our image urls into our new array
         .then(function (jsonData) {
@@ -79,6 +83,14 @@ app.getImage = function () {
                 // 19. pushed our anime_name into our new array app.altArray
                 app.altArray.push(item.anime_name)
             })
+        })
+        .catch(function(err){
+            if(err.message === "Not Found"){
+                alert("Sorry the API doesn't have the image at the moment")
+            } else {
+                alert("Something went wrong and we have no idea")
+            }
+
         })
 }
 //25. Create a method to hold our AJAX call for Giphy
@@ -95,12 +107,24 @@ app.getGiphy = (userGiphy) => {
     });
 
     fetch(url).then(function (result) {
-        return (result.json())
+        if(result.ok){
+            return (result.json())
+        } else {
+            throw new Error(result.statusText)
+        }
     })
         .then(function (result) {
             app.displayGiphy(result.data);
             // console.log(result.data)
             // append to our empty div
+        })
+
+        .catch(function(err){
+            if(err.message === "Not Found"){
+                alert("Sorry the API doesn't have the Gifs at the moment")
+            } else {
+                alert("Something went wrong and we have no idea")
+            }
         })
 }
 
@@ -133,9 +157,9 @@ app.displayImage = function (imgSelected,altSource) {
 // 23. Created a method to display our anime facts and append to the div
 app.displayFacts = function(factSelected){
     // made a varible to hold our created p element
-    const factEl = document.createElement('p');
-    factEl.innerText = factSelected;
-    app.animeFacts.append(factEl);
+    // const factEl = document.createElement('p');
+    app.animeFacts.innerText = factSelected;
+    // app.animeFacts.append(factEl);
 }
 
 // 11. Created an event listener of change onto our select dropdown
@@ -153,7 +177,7 @@ app.events = function () {
         const valueOne = document.querySelector('#anime').value.split(',')[1];
 
         // 14. make sure our empty div is cleared before each call
-        app.animePicture.innerHTML = '';
+        app.animePicture.innerText = '';
         // 15.called our method that displays the image and pass our user selection into it. 
         app.displayImage(userPicture,userAlt);
         // 22.called the facts API and passed the valueOne as the argument 
