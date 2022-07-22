@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -243,20 +244,20 @@ body p {
 
 h1 {
   font-family: "Permanent Marker", cursive;
-  color: #FFA07A;
+  color: #CD853F;
   font-size: 3rem;
   text-align: center;
 }
 
 a {
-  color: blue;
+  color: #401c02;
 }
 
 .skipLink {
   position: absolute;
   left: -2000px;
   top: 10px;
-  background-color: #FF7F50;
+  background-color: #fee685;
   color: white;
   z-index: 10;
 }
@@ -271,8 +272,7 @@ a {
 }
 
 body {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgb(34, 193, 195)), to(rgb(253, 187, 45)));
-  background-image: linear-gradient(0deg, rgb(34, 193, 195) 0%, rgb(253, 187, 45) 100%);
+  background-color: #fee685;
 }
 
 img {
@@ -293,21 +293,21 @@ ul {
 }
 
 label {
-  margin-left: 30px;
+  margin-left: 0px;
   font-size: 1.5rem;
+  color: #401c02;
 }
 
-li {
+nav li {
   -webkit-transition: -webkit-transform 0.9s;
   transition: -webkit-transform 0.9s;
   transition: transform 0.9s;
   transition: transform 0.9s, -webkit-transform 0.9s;
 }
-
-li:hover,
-:focus {
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
+nav li:hover,
+nav :focus {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
 }
 
 .logo {
@@ -322,33 +322,33 @@ li:hover,
           transform: rotate(90deg);
 }
 
-button {
+li img {
   -webkit-transition: -webkit-transform 0.8s;
   transition: -webkit-transform 0.8s;
   transition: transform 0.8s;
   transition: transform 0.8s, -webkit-transform 0.8s;
 }
-button:hover,
-button :focus,
-button :active {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  color: pink;
-  background-color: cyan;
+li img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .starterHeader a:hover,
-:focus {
+.starterHeader :focus {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  color: pink;
-  background-color: cyan;
+  color: #401c02;
+  background-color: #CD853F;
+}
+
+a:hover {
+  color: #CD853F;
 }
 
 button {
   font-size: 1.5rem;
   font-family: "Edu SA Beginner", cursive;
-  background-color: #FF8C00;
+  background-color: #401c02;
   border: none;
   padding: 10px 30px;
   border-radius: 20%;
@@ -384,6 +384,7 @@ button {
   padding: 50px 150px;
   background-color: salmon;
   border-radius: 5%;
+  margin-top: 10px;
 }
 
 .carouselFlexChild {
@@ -397,8 +398,8 @@ button {
 }
 
 .starterMain {
-  height: 60vh;
-  margin-top: 50px;
+  height: 65vh;
+  margin-top: 30px;
 }
 
 .carouselFlexParent {
@@ -412,7 +413,7 @@ button {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 500px;
   position: relative;
   margin: auto;
 }
@@ -521,13 +522,9 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 10px;
 }
 ul li {
   margin: 0 20px;
-  border: 1px solid #FF7F50;
-  background-color: #FF7F50;
-  padding: 10px 30px;
 }
 ul a {
   font-size: 1.2rem;
@@ -550,8 +547,8 @@ input[type=checkbox] {
   opacity: 0;
 }
 input[type=checkbox]:focus + label {
-  border: 1px dotted #FF7F50;
-  color: purple;
+  border: 1px dotted #fee685;
+  color: #CD853F;
 }
 
 .showMe {
@@ -590,9 +587,11 @@ input[type=checkbox]:focus + label {
 
 select {
   width: 65%;
-  padding-top: 20px;
-  margin-left: 28px;
+  text-align: center;
   margin-top: 20px;
+  height: 40px;
+  background-color: #CD853F;
+  border-radius: 40px;
 }
 
 .animeSelect {
@@ -604,18 +603,51 @@ select {
           transform: none;
 }
 
+.flexFact::before {
+  content: "";
+  width: 50%;
+  height: 200px;
+  background-image: url(../assets/pikachesitting.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: block;
+}
+
+.factAnime {
+  border: 6px groove #401c02;
+  border-radius: 40%;
+}
+
+.factAnime::after {
+  content: "☃";
+}
+
 .flexFact p {
   text-align: center;
-  margin-top: 20%;
+  margin-top: 6%;
   font-size: 1.5rem;
-  line-height: 35px;
+  line-height: 40px;
   letter-spacing: 2px;
+  color: #401c02;
+}
+
+.gifImgLi {
+  background-color: black;
+}
+
+.gifImage {
+  border: 1px solid black;
+}
+
+iframe {
+  width: 100%;
+  height: 400px;
 }
 
 footer {
   margin-top: 50px;
   padding: 20px 10px;
-  background-color: #FFA07A;
+  background-color: #f4e2c6;
   opacity: 0.8;
   text-align: center;
   position: relative;
@@ -676,9 +708,6 @@ footer p {
     font-size: 1rem;
     line-height: 30px;
   }
-  label {
-    margin: 0;
-  }
   .starterHeader a {
     font-size: 2.5rem;
     border: 10px inset salmon;
@@ -690,6 +719,9 @@ footer p {
   }
 }
 @media (max-width: 500px) {
+  .logo {
+    top: 0px;
+  }
   nav .showMe {
     visibility: visible;
   }
@@ -712,30 +744,34 @@ footer p {
   }
   nav label[for=toggle] {
     position: fixed;
-    color: #FF8C00;
+    color: #401c02;
     top: 10px;
     left: 15px;
     z-index: 5;
-    font-size: 3rem;
+    font-size: 2rem;
   }
   nav .slideOut {
     position: fixed;
-    width: 40%;
-    right: -40%;
-    background-color: #FF7F50;
+    width: 100vw;
+    right: -110%;
+    background-color: #fee685;
     opacity: 0.95;
     height: 100vh;
-    -webkit-transition: 0.6s;
-    transition: 0.6s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
   }
   nav .slideOut li {
     width: 100%;
   }
   nav .slideOut a {
     display: inline-block;
+    text-align: center;
     width: 100%;
     padding: 10px;
-    font-size: 1.3rem;
+    font-size: 2rem;
+  }
+  h1 {
+    margin-top: 50px;
   }
   .animeSelect select {
     padding-top: 10px;

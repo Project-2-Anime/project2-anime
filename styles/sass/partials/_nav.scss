@@ -1,11 +1,7 @@
 ul{
     display: flex;
-    margin-top: 10px;
     li{
         margin: 0 20px;
-        border: 1px solid $primary;
-        background-color: $primary;
-        padding: 10px 30px;
     }
     a{
         font-size: 1.2rem;
@@ -29,7 +25,7 @@ input[type=checkbox]{
     opacity: 0;
     &:focus+label {
             border: 1px dotted $primary;
-            color: purple;
+            color: $secondary;
         }
 
 }
