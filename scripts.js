@@ -63,8 +63,10 @@ app.facts = (userValue) => {
 
             app.displayFacts(factArray)
         })
-
 }
+// END Facts AJAX CALL
+
+// START OUR IMAGES AJAX CALL
 
 // 5. Creating a method to hold our AJAX call for images
 app.getImage = function () {
@@ -81,6 +83,10 @@ app.getImage = function () {
             })
         })
 }
+// END OUR IMAGES AJAX CALL
+
+// START OUR GIPHY AJAX CALL
+
 //25. Create a method to hold our AJAX call for Giphy
 app.getGiphy = (userGiphy) => {
     //27. ADD a parameter so that when we call it, we can pass an argument ()
@@ -103,25 +109,18 @@ app.getGiphy = (userGiphy) => {
             // append to our empty div
         })
 }
+// END GIPHY AJAX CALL
 
 // 30. create a method to display our giphy images onto the empty div.
-
 app.displayGiphy = function (gifSelected) {
-gifSelected.forEach((singleGiphy) => {
-    //   31. Made a variable that hold our created img element
-    const gif = document.createElement('img');
-    gif.src = singleGiphy.images.original.url;
-    gif.alt = singleGiphy.title;
-    app.animeGif.appendChild(gif);
-    
-})
-
-    // app.animeGif.appendChild(img);
+    gifSelected.forEach((singleGiphy) => {
+        //   31. Made a variable that hold our created img element
+        const gif = document.createElement('img');
+        gif.src = singleGiphy.images.original.url;
+        gif.alt = singleGiphy.title;
+        app.animeGif.appendChild(gif);
+    });
 }
-
-// call this in an event listener
-// app.animeGif.innerHTML = '';
-
 // 9. Created a method to display our images and append to the empty div.
 app.displayImage = function (imgSelected,altSource) {
 //   10. Made a variable that hold our created img element
@@ -137,6 +136,7 @@ app.displayFacts = function(factSelected){
     factEl.innerText = factSelected;
     app.animeFacts.append(factEl);
 }
+// START EVENT LISTENER 
 
 // 11. Created an event listener of change onto our select dropdown
 app.events = function () {
@@ -147,11 +147,8 @@ app.events = function () {
         const userPicture = app.imgArray[userSelection];
         // 20. created a variable to hold the user selected value from the app.altArray array 
         const userAlt = app.altArray[userSelection];
-
-        // WHERE WE LEFT OUT, TRYING TO TARGET OUR FACTS
         // 17. Create a variable to target the user selection value from our options that only look at the string
         const valueOne = document.querySelector('#anime').value.split(',')[1];
-
         // 14. make sure our empty div is cleared before each call
         app.animePicture.innerHTML = '';
         // 15.called our method that displays the image and pass our user selection into it. 
@@ -165,7 +162,9 @@ app.events = function () {
         app.animeGif.innerHTML = '';
         // 34. call our giphy and pass it the variable we created
         app.getGiphy(animeGiphy);
-    })
+    });
 }
+// END EVENT LISTENER
+
 // 3. Called our init method
 app.init();
