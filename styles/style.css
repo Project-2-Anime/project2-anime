@@ -246,6 +246,7 @@ h1 {
   color: #CD853F;
   font-size: 3rem;
   text-align: center;
+  margin: 100px 0 100px 0;
 }
 
 a {
@@ -309,6 +310,42 @@ nav :focus {
           transform: scale(1.4);
 }
 
+@-webkit-keyframes akatsuki {
+  0% {
+    margin-top: 100px;
+  }
+  20%, 40%, 60%, 80% {
+    margin-left: 100px;
+  }
+  10%, 30%, 50%, 70%, 90% {
+    margin-left: 10px;
+  }
+  100% {
+    margin-left: 20px;
+  }
+}
+
+@keyframes akatsuki {
+  0% {
+    margin-top: 100px;
+  }
+  20%, 40%, 60%, 80% {
+    margin-left: 100px;
+  }
+  10%, 30%, 50%, 70%, 90% {
+    margin-left: 10px;
+  }
+  100% {
+    margin-left: 20px;
+  }
+}
+.flexChild .cloud {
+  -webkit-animation: akatsuki 10s ease-in-out infinite;
+          animation: akatsuki 10s ease-in-out infinite;
+  height: 200px;
+  width: 300px;
+}
+
 .logo {
   -webkit-transition: -webkit-transform 0.8s;
   transition: -webkit-transform 0.8s;
@@ -344,10 +381,112 @@ a:hover {
   color: #CD853F;
 }
 
+.fade {
+  -webkit-animation-name: slide;
+          animation-name: slide;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+@-webkit-keyframes slide {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: scale(0) translateY(0) rotate(0);
+            transform: scale(0) translateY(0) rotate(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1) translateY(-300px) rotate(90deg);
+            transform: scale(1) translateY(-300px) rotate(90deg);
+  }
+}
+@keyframes animate {
+  0% {
+    -webkit-transform: scale(0) translateY(0) rotate(0);
+            transform: scale(0) translateY(0) rotate(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1) translateY(-300px) rotate(90deg);
+            transform: scale(1) translateY(-300px) rotate(90deg);
+  }
+}
+.balls div:nth-child(1) {
+  bottom: 12%;
+  right: 42%;
+  -webkit-animation: animate 12s ease infinite;
+          animation: animate 12s ease infinite;
+}
+
+.balls div:nth-child(2) {
+  bottom: 70%;
+  right: 50%;
+  -webkit-animation: animate 12s ease infinite;
+          animation: animate 12s ease infinite;
+}
+
+.balls div:nth-child(3) {
+  bottom: 17%;
+  right: 6%;
+  -webkit-animation: animate 12s ease infinite;
+          animation: animate 12s ease infinite;
+}
+
+.balls div:nth-child(4) {
+  bottom: 20%;
+  left: 10%;
+  -webkit-animation: animate 15s ease infinite;
+          animation: animate 15s ease infinite;
+}
+
+.balls div:nth-child(5) {
+  bottom: 67%;
+  right: 15%;
+  -webkit-animation: animate 15s ease infinite;
+          animation: animate 15s ease infinite;
+}
+
+.balls div:nth-child(6) {
+  bottom: 80%;
+  right: 5%;
+  -webkit-animation: animate 15s ease infinite;
+          animation: animate 15s ease infinite;
+}
+
+.balls div:nth-child(7) {
+  bottom: 60%;
+  left: 80%;
+  -webkit-animation: animate 15s ease infinite;
+          animation: animate 15s ease infinite;
+}
+
+.balls div:nth-child(8) {
+  bottom: 32%;
+  left: 25%;
+  -webkit-animation: animate 16s ease infinite;
+          animation: animate 16s ease infinite;
+}
+
 button {
   font-size: 1.5rem;
   font-family: "Edu SA Beginner", cursive;
-  background-color: #401c02;
+  background-color: transparent;
   border: none;
   padding: 10px 30px;
   border-radius: 20%;
@@ -356,7 +495,7 @@ button {
 }
 
 .headerParent {
-  height: 75vh;
+  height: 80vh;
 }
 
 .starterHeader {
@@ -374,40 +513,20 @@ button {
       -ms-flex-align: center;
           align-items: center;
 }
-.starterHeader h1 {
-  font-size: 5rem;
+.starterHeader .starterTitle {
+  font-size: 6rem;
+  margin-bottom: 30px;
 }
 .starterHeader a {
-  font-size: 3rem;
-  border: 1px solid salmon;
+  font-size: 4rem;
+  font-weight: bold;
   padding: 50px 150px;
-  background-color: salmon;
   border-radius: 5%;
-  margin-top: 10px;
-}
-
-.carouselFlexChild {
-  border: 1px solid red;
-}
-
-.carouselFlexChild img {
-  border: 1px solid black;
-  border-radius: 50%;
-  cursor: pointer;
 }
 
 .starterMain {
   height: 65vh;
-  margin-top: 30px;
-}
-
-.carouselFlexParent {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  margin-top: 70px;
 }
 
 .pokemonLineup {
@@ -417,7 +536,13 @@ button {
   z-index: -1;
 }
 
-/* Slideshow container */
+.balls div {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  opacity: 0.5;
+}
+
 .slideshow-container {
   max-width: 500px;
   position: relative;
@@ -428,40 +553,26 @@ button {
   display: none;
 }
 
-/* Next & previous buttons */
 .prev,
 .next {
-  cursor: pointer;
   position: absolute;
   top: 50%;
   width: auto;
   margin-top: -22px;
-  padding: 16px;
-  color: rgba(0, 0, 0, 0.7);
-  font-weight: bold;
-  font-size: 18px;
-  -webkit-transition: 0.6s ease;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  color: white;
 }
 
-/* Position the "next button" to the right */
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Caption text */
 .text {
   color: #f2f2f2;
   font-size: 15px;
@@ -472,58 +583,6 @@ button {
   text-align: center;
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  -webkit-transition: background-color 0.6s ease;
-  transition: background-color 0.6s ease;
-}
-
-.active,
-.dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-          animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
 ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -609,14 +668,16 @@ select {
           transform: none;
 }
 
-.flexFact::before {
-  content: "";
-  width: 50%;
-  height: 200px;
-  background-image: url(../assets/pikachesitting.png);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  display: block;
+.flexFact {
+  position: relative;
+}
+.flexFact img {
+  position: absolute;
+  top: -100px;
+  width: 40%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 150px;
 }
 
 .factAnime {
@@ -626,11 +687,12 @@ select {
 
 .flexFact p {
   text-align: center;
-  margin-top: 6%;
+  margin-top: 4%;
   font-size: 1.5rem;
   line-height: 40px;
   letter-spacing: 2px;
   color: #401c02;
+  padding: 30px;
 }
 
 .gifImgLi {
@@ -691,11 +753,12 @@ footer p {
   }
   .starterHeader a {
     font-size: 2.5rem;
-    border: 1px solid salmon;
-    padding: 40px 120px;
   }
   .starterHeader p {
     display: none;
+  }
+  .starterMain {
+    margin-top: 200px;
   }
 }
 @media (max-width: 700px) {
@@ -713,11 +776,12 @@ footer p {
     font-size: 1rem;
     line-height: 30px;
   }
+  .flexFact img {
+    top: -85px;
+  }
   .starterHeader a {
     font-size: 2.5rem;
-    border: 10px inset salmon;
-    border-radius: 40%;
-    padding: 40px 120px;
+    padding: 50px 75px;
   }
   footer p {
     font-size: 1rem;
@@ -794,6 +858,18 @@ footer p {
         -ms-flex-align: center;
             align-items: center;
   }
+  .starterHeader a {
+    padding: 50px 50px;
+  }
+  .starterHeader a:hover,
+.starterHeader :focus {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  .starterMain {
+    height: 65vh;
+    margin-top: 20px;
+  }
   .iconContainer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -815,14 +891,22 @@ footer p {
   label {
     font-size: 1rem;
   }
-  .starterHeader h1 {
-    font-size: 3.5rem;
+  .flexFact img {
+    top: -76px;
+  }
+  .headerParent {
+    height: 60vh;
+  }
+  .starterHeader .starterTitle {
+    font-size: 3rem;
   }
   .starterHeader a {
     font-size: 2.5rem;
-    border: 10px inset salmon;
-    border-radius: 40%;
-    padding: 20px 50px;
+  }
+  .starterHeader a:hover,
+.starterHeader :focus {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
   }
   .starterHeader p {
     font-size: 0.8rem;

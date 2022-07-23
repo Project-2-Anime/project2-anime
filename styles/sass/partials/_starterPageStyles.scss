@@ -1,45 +1,27 @@
 // starter page header styles 
-
 .headerParent{
-    height: 75vh;
+    height: 80vh;
 }
 .starterHeader{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    h1{
-        font-size: 5rem;
+    .starterTitle{
+        font-size: 6rem;
+        margin-bottom: 30px;
     }
     a{  
-        font-size: 3rem;
-        border: 1px solid salmon;
+        font-size: 4rem;
+        font-weight: bold;
         padding: 50px 150px;
-        background-color: salmon;
         border-radius: 5%;
-        margin-top: 10px;
     }
-}
-
-.carouselFlexChild{
-    border: 1px solid red;
-
-}
-.carouselFlexChild img{
-    border: 1px solid black;
-    border-radius: 50%;
-    cursor: pointer;
-
 }
 
 .starterMain{
     height: 65vh;
-    margin-top: 30px;
-}
-
-.carouselFlexParent{
-    display: flex;
-    justify-content: center;
+    margin-top: 70px;
 }
 
 .pokemonLineup{
@@ -47,4 +29,11 @@
     top: -65px;
     left: -200px;
     z-index: -1;
+}
+
+.balls div {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    opacity: 0.5;
 }

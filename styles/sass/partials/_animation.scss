@@ -1,3 +1,5 @@
+// INDEX PAGE STYLES
+
 nav{
     li{
         transition: transform 0.9s;
@@ -8,6 +10,39 @@ nav{
     }
 }
 
+// INDEX PAGE CLOUD STYLES 
+@keyframes akatsuki {
+    0% {
+            margin-top: 100px;
+        }
+    
+        20%,
+        40%,
+        60%,
+        80% {
+            margin-left: 100px;
+        }
+    
+        10%,
+        30%,
+        50%,
+        70%,
+        90% {
+            margin-left: 10px;
+        }
+    
+        100% {
+          margin-left: 20px;
+        }
+}
+
+.flexChild{
+    .cloud{
+        animation: akatsuki 10s ease-in-out infinite;
+        height: 200px;
+        width: 300px;
+    }
+}
 .logo{
     transition: transform 0.8s;
 }
@@ -15,19 +50,18 @@ nav{
     transform: rotate(90deg);
 }
 
-
-    li{
-        img{
-            transition: transform 0.8s;
-        }
-        img:hover{
-            transform: scale(1.1);
-        }
+li{
+    img{
+        transition: transform 0.8s;
     }
+    img:hover{
+        transform: scale(1.1);
+    }
+}
 
+// STARTER PAGE HEADER ANIMATIONS
 
 .starterHeader{
-
     a:hover,
     :focus{
        transform: scale(1.2);
@@ -36,8 +70,85 @@ nav{
     }
 }
 
-
 a:hover{
     color: $secondary;
+}
+
+// START PAGE BUTTON ANIMATIONS
+
+.fade {
+    animation-name: slide;
+    animation-duration: 1s;
+}
+
+@keyframes slide {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+// STARTER PAGE DragonBall Animations
+
+@keyframes animate {
+    0% {
+        transform: scale(0) translateY(0) rotate(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1) translateY(-300px) rotate(90deg);
+        // opacity: 1;
+    }
+}
+.balls div:nth-child(1) {
+    bottom: 12%;
+    right: 42%;
+    animation: animate 12s ease infinite;
+}
+
+.balls div:nth-child(2) {
+    bottom: 70%;
+    right: 50%;
+    animation: animate 12s ease infinite;
+}
+
+.balls div:nth-child(3) {
+    bottom: 17%;
+    right: 6%;
+    animation: animate 12s ease infinite;
+}
+
+.balls div:nth-child(4) {
+    bottom: 20%;
+    left: 10%;
+    animation: animate 15s ease infinite;
+}
+
+.balls div:nth-child(5) {
+    bottom: 67%;
+    right: 15%;
+    animation: animate 15s ease infinite;
+}
+
+.balls div:nth-child(6) {
+    bottom: 80%;
+    right: 5%;
+    animation: animate 15s ease infinite;
+}
+
+.balls div:nth-child(7) {
+    bottom: 60%;
+    left: 80%;
+    animation: animate 15s ease infinite;
+}
+
+.balls div:nth-child(8) {
+    bottom: 32%;
+    left: 25%;
+    animation: animate 16s ease infinite;
 }
 
