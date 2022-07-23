@@ -19,18 +19,19 @@
     label{
         font-size: 1.2rem;
     }
-
     // media queries for start.html
     .starterHeader{
         a {
             font-size: 2.5rem;
-            border: 1px solid salmon;
-            padding: 40px 120px;
         }
         p{
             display: none;
         }
     }
+
+        .starterMain {
+            margin-top: 200px;
+        }
 }
 
 @media(max-width:700px){
@@ -49,20 +50,20 @@
         }
     }
 
-    .flexFact p {
+    .flexFact {
+        p {
         font-size: 1rem;
         line-height: 30px;
+        }
+        img{
+            top: -85px;
+        }
     }
-
-
-
 
     // media queries for start.html
     .starterHeader a {
         font-size: 2.5rem;
-        border: 10px inset salmon;
-        border-radius: 40%;
-        padding: 40px 120px;
+        padding: 50px 75px;
     }
 
     footer p{
@@ -149,6 +150,21 @@
     }
 
     // media queries for start.html
+    .starterHeader {
+        a {
+            padding: 50px 50px;
+        }
+        a:hover,
+        :focus {
+            transform: scale(0.9);
+        }
+    }
+
+        .starterMain {
+            height: 65vh;
+            margin-top: 20px;
+        }
+
     .iconContainer {
         display: flex;
         flex-direction: row;
@@ -168,23 +184,30 @@
     label{
         font-size: 1rem;
     }
+    .flexFact {
+        img {
+            top: -76px;
+        }
+    }
+    
     // media queries for start.html
+    .headerParent{
+        height: 60vh;
+    }
     .starterHeader{
-        h1{
-            font-size: 3.5rem;
+        .starterTitle{
+            font-size: 3rem;
         }
         a {
             font-size: 2.5rem;
-            border: 10px inset salmon;
-            border-radius: 40%;
-            padding: 20px 50px;
-    
         }
-
+        a:hover,
+        :focus {
+            transform: scale(0.7);
+        }                
         p{
             font-size: 0.8rem;
         }
-
     } 
 
     .iconContainer {
