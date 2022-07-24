@@ -52,14 +52,23 @@ app.facts = (userValue) => {
     //21. passed a parameter into our API as the endpoint 
     fetch(`https://anime-facts-rest-api.herokuapp.com/api/v1/${userValue}`)
         .then(function (resp) {
-            return resp.json();
+            if (resp.ok){
+                return resp.json();
+            } else {
+                throw new Error (resp.statusText)
+            }
         })
         .then(function (result) {
             const factArray = result.data[0].fact;
-            // console.log(factArray);
             // append this to our empty div
-
             app.displayFacts(factArray)
+        })
+        .catch(function(error){
+            if (error.message === "Not Found"){
+                alert("Sorry the API doesn't have this fact at the moment");
+            } else {
+                alert("Something went wrong, out of our control, sorry!");
+            }
         })
 }
 // END Facts AJAX CALL

@@ -1,5 +1,5 @@
 @media (max-width: 1000px){
-    // media queries for index.html
+    // media queries for START.html
     .animeSelect{
         select{
             width: 50%;
@@ -19,7 +19,7 @@
     label{
         font-size: 1.2rem;
     }
-    // media queries for start.html
+    // media queries for index.html
     .starterHeader{
         a {
             font-size: 2.5rem;
@@ -35,7 +35,7 @@
 }
 
 @media(max-width:700px){
-    // media queries for index.html
+    // media queries for START.html
     .animeSelect {
         select {
             padding-top: 10px;
@@ -60,7 +60,7 @@
         }
     }
 
-    // media queries for start.html
+    // media queries for index.html
     .starterHeader a {
         font-size: 2.5rem;
         padding: 50px 75px;
@@ -72,7 +72,7 @@
 }
 
 @media(max-width:500px){
-    // media queries for index.html
+    // media queries for START.html
     // Nav SlideOut media queries
     .logo{
         top: 0px;
@@ -149,7 +149,7 @@
         align-items: center;
     }
 
-    // media queries for start.html
+    // media queries for index.html
     .starterHeader {
         a {
             padding: 50px 50px;
@@ -159,11 +159,11 @@
             transform: scale(0.9);
         }
     }
-
-        .starterMain {
-            height: 65vh;
-            margin-top: 20px;
-        }
+    
+    .starterMain {
+        height: 70vh;
+        margin-top: 100px;
+    }
 
     .iconContainer {
         display: flex;
@@ -180,7 +180,7 @@
 }
 
 @media(max-width:330px){
-    // media queries for index.html
+    // media queries for start.html
     label{
         font-size: 1rem;
     }
@@ -190,7 +190,7 @@
         }
     }
     
-    // media queries for start.html
+    // media queries for index.html
     .headerParent{
         height: 60vh;
     }
