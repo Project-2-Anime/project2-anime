@@ -1,4 +1,4 @@
-// INDEX PAGE STYLES
+// STARTER PAGE STYLES
 
 nav{
     li{
@@ -59,7 +59,7 @@ li{
     }
 }
 
-// STARTER PAGE HEADER ANIMATIONS
+// INDEX PAGE HEADER ANIMATIONS
 
 .starterHeader{
     a:hover,
@@ -74,7 +74,7 @@ a:hover{
     color: $secondary;
 }
 
-// START PAGE BUTTON ANIMATIONS
+// INDEX PAGE BUTTON ANIMATIONS
 
 .fade {
     animation-name: slide;
@@ -91,7 +91,7 @@ a:hover{
     }
 }
 
-// STARTER PAGE DragonBall Animations
+// INDEX PAGE DragonBall Animations
 
 @keyframes animate {
     0% {

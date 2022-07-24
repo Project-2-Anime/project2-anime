@@ -1,3 +1,4 @@
+// STARTER PAGE MAIN SECTION
 .flexParent{
     display: flex;
     justify-content: center;
@@ -24,7 +25,7 @@
     }
 }
 
-// select styles 
+// STARTER PAGE Select FORM styles 
 
 select{
     width: 65%;
@@ -57,7 +58,6 @@ select{
 }
 
 .factAnime{
-    // height: fit-content;
     border: 6px groove $tertiary;
     border-radius: 40%;
 }
@@ -71,8 +71,6 @@ select{
     color: $tertiary;
     padding: 30px;
 }
-
-
 
 // GIF Container styles
 .gifImgLi{
