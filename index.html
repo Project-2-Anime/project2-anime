@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anime</title>
+    <title>Begin!</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner&family=Permanent+Marker&display=swap"
@@ -13,133 +12,135 @@
     <link rel="stylesheet" href="./styles/style.css">
     <script src="https://kit.fontawesome.com/209cb79946.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
     <!-- Skip Link -->
     <a href="#mainContent" class="skipLink">Skip to main content.</a>
-
-    <!-- Nav Bar -->
-    <nav>
-        <div class="wrapper">
-            <!-- Nav to be hidden and shown on mediaQueries -->
-            <input type="checkbox" id="toggle" name="toggle" class="hideMe">
-            <label for="toggle" id="toggle" class="fa-solid fa-bars hideMe showMe"></label>
-            <ul class="navBar slideOut">
-                <li>
-                    <a href="./start.html">Anime</a>
-                </li>
-                <li>
-                    <a href="#mainContent">About</a>
-                </li>
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-            </ul>
+    
+    <!-- START Header section -->
+    <header class="headerParent">
+        <!-- START wrapper -->
+        <div class="wrapper starterHeader">
+            <h1 class="starterTitle">Anime Fact Finder</h1>
+            <a href="./start.html">Start</a>
         </div>
-
-        <div class="logo">
-            <a href="./start.html">
-                <img src="./assets/pngwing.com.png" alt="A logo of the Konoha symbol from the show Naruto">
-
-            </a>
-        </div>
-
         <!-- END wrapper -->
-    </nav>
-
-    <!--START Header Content -->
-    <header>
-        <div class="wrapper">
-            <h1>Welcome to The Anime Selection</h1>
-        </div>
     </header>
 
-    <!--START Main / section -->
-    <main id="mainContent">
+    <!--START CONTAINERS FOR OUR STYLED PICTURES -->
+    <div class="pokemonLineup">
+        <img src="./assets/pokemon.lineup.png" alt="An image of 9 baby pokemon standing on each others shoulders">
+    </div>
+    <div class="balls">
+        <div>
+            <img src="./assets/4 star dragon ball.png"
+                alt="A picture of a 4 starred Dragon ball from the show Dragon Ball Z">
+        </div>
+        <div>
+            <img src="./assets/4 star dragon ball.png"
+                alt="A picture of a 4 starred Dragon ball from the show Dragon Ball Z">
+        </div>
+        <div>
+            <img src="./assets/4 star dragon ball.png"
+                alt="A picture of a 4 starred Dragon ball from the show Dragon Ball Z">
+        </div>
+        <div>
+            <img src="./assets/4 star dragon ball.png"
+                alt="A picture of a 4 starred Dragon ball from the show Dragon Ball Z">
+        </div>
+        <div>
+            <img src="./assets/4 star dragon ball.png"
+                alt="A picture of a 4 starred Dragon ball from the show Dragon Ball Z">
+        </div>
+        <div>
+            <img src="./assets/4 star dragon ball.png"
+                alt="A picture of a 4 starred Dragon ball from the show Dragon Ball Z">
+        </div>
+        <div>
+            <img src="./assets/4 star dragon ball.png"
+                alt="A picture of a 4 starred Dragon ball from the show Dragon Ball Z">
+        </div>
+        <div>
+            <img src="./assets/4 star dragon ball.png"
+                alt="A picture of a 4 starred Dragon ball from the show Dragon Ball Z">
+        </div>
+    </div>
+    <!--END CONTAINERS FOR OUR STYLED PICTURES -->
+
+    <!-- START Main -->
+    <main class="starterMain">
         <section>
-            <ul class="flexParent">
-                <li class="flexChild animeSelect">
-                    <div>
-                        <label for="anime">Please select the Anime Name from the dropdown menu:</label>
-                        <select name="anime" id="anime">
-                            <!-- anime names to be shown through JavaScript -->
-                            <option value="xxx" disabled selected> Choose an Anime </option>
-                            <option value="0,bleach,bleach">Bleach</option>
-                            <option value="1,black_clover,black clover">Black Clover</option>
-                            <option value="2,dragon_ball, dragon ball">Dragon Ball</option>
-                            <!-- <option value="3, jujutsu_kaisen">Jujutsu Kaisen</option> -->
-                            <option value="4,fma_brotherhood, full metal Alchemist fight">Fullmetal Alchemist: Brotherhood</option>
-                            <option value="5,naruto, naruto small">Naruto</option>
-                            <option value="6,gintama, gintama">Gintama</option>
-                            <option value="7,itachi_uchiha, itachi otaku">Itachi Uchiha</option>
-                            <option value="8,one_piece, one piece">One Piece</option>
-                            <option value="9,demon_slayer, demon slayer">Demon Slayer</option>
-                            <option value="10,attack_on_titan, attack on titan wallpaper">Attack on Titan</option>
-                            <option value="11,hunter_x_hunter, hunter x hunter fight">Hunter x Hunter</option>
-                            <option value="12,boku_no_hero_academia, my hero academia fight">My Hero Academia</option>
-                        </select>
+            <!-- START wrapper -->
+            <div class="wrapper">
+                <!-- START flex Container -->
+                <div class="slideshow-container">
+                
+                    <div class="slideShow fade">
+                        <img src="./assets/wallpapersden.com_kame-house-dragon-ball-z_3032x1706.jpg" alt="An image of goku from the show dragon ball floating on a cloud into a house on an island">
                     </div>
-                    <img src="./assets/akatsuki.cloud.png" alt="The symbol for the Akatsuki clan from the show Naruto" class="cloud"
-                    >
-                </li>
-
-                <li class="flexChild flexImg">
-                    <div id="animePicture">
-                        <!-- Empty div where image will append -->
-                        <img src="./assets/goku-pngwing.com.png" alt="A Picture of Goku">
+                
+                    <div class="slideShow fade">
+                        <img src="./assets/wallpapersden.com_dragon-ball-z-kakarot-game_4800x4800.jpg" alt="An image of Goku from the show dragon ball holding his son Gohan and waving hello">
                     </div>
-                </li>
-
-                <li class="flexChild flexFact">
-                    <img src="./assets/pikachesitting.png" alt="A picture of Pikachu sitting down">
-                    <div class="factAnime">
-                        <!-- Empty div where random fact will append -->
-                        <p id="factDisplay">A fun fact of the Anime you selected will be displayed here!</p>
-
+                
+                    <div class="slideShow fade">
+                        <img src="./assets/goku-nube-voladora-nube-voladora-dragon-ball_2560x1440.jpg" alt="An image of child Goku from the show dragon ball reaching out for a dragon ball">
                     </div>
-                </li>
 
-                <li class="flexChild flexImg gifImgLi">
-                    <div id="giphyImage" class="gifImage">
-                        <!-- Empty div where random Giphy GIF will append  -->
-                    <iframe src="https://giphy.com/embed/ayMW3eqvuP00o" frameBorder="0" class="giphy-embed"
-                        allowFullScreen></iframe>
-                        
+                    <div class="slideShow fade">
+                        <img src="./assets/wallpapersden.com_gaara-art-naruto_wxl.jpg" alt="An image of Gaara from the show Naruto sitting on a cliff looking at a village">
                     </div>
-                </li>
-            </ul>
+                    <div class="slideShow fade">
+                        <img src="./assets/wallpapersden.com_jujutsu-kaisen-satoru-gojo-digital-art_3054x2000.jpg" alt="An image of Satoru from the show Jujutsu kaisen standing infront of the earth floating in space">
+                    </div>
+                    <div class="slideShow fade">
+                        <img src="./assets/wallpapersden.com_naruto-gaara-kazekage_2953x1800.jpg" alt="An image of Gaara standing behind a shell of sand defending him from shurikens">
+                    </div>
+                    <div class="slideShow fade">
+                        <img src="./assets/wallpapersden.com_one-punch-man-shingeki-no-kyojin-saitama_1920x1140.jpg" alt="An image of Saitama from the show One Punch Man flying beside a titan from the show attack on titans.">
+                    </div>
+                    <div class="slideShow fade">
+                        <img src="./assets/wallpapersden.com_sasuke-uchiha-cool_2174x1223.jpg" alt="A Picture of Sasuke from the show Naruto standing infront of a purple moon">
+                    </div>
+                    <div class="slideShow fade">
+                        <img src="./assets/wallpapersden.com_saitama-cool-one-punch-man_1920x1358.jpg" alt="A Picture of Saitma sensei from One Punch Man in a lunging punch">
+                    </div>
+
+                    <button class="prev">&#8656</button>
+                    <button class="next">&#8658</button>
+                </div>
+                <!-- END flex Container -->
+            </div>
+            <!-- END wrapper -->
         </section>
-        </section>
-
     </main>
 
-    <!-- START footer -->
-    <footer id="contact">
-        <!-- START wrapper -->
-        <div class="wrapper">
-            <p>
-                Created at <a href="https://junocollege.com/" target="_blank" rel="noopener">Juno College of
-                    Technology</a>
-            </p>
+    
+<!-- START footer -->
+<footer id="contact">
+    <!-- START wrapper -->
+    <div class="wrapper">
+        <p>
+            Created at <a href="https://junocollege.com/" target="_blank" rel="noopener">Juno College of Technology</a>
+        </p>
 
-            <p>Data courtesy to <a href="https://developers.giphy.com/" target="_blank" rel="noopener">Giphy Api</a></p>
+        <p>Data courtesy to <a href="https://developers.giphy.com/" target="_blank" rel="noopener">Giphy Api</a></p>
 
-            <p>Data courtesy to <a href="https://chandan-02.github.io/anime-facts-rest-api/" target="_blank"
-                    rel="noopener">Anime Facts Api</a></p>
+        <p>Data courtesy to <a href="https://chandan-02.github.io/anime-facts-rest-api/" target="_blank"
+                rel="noopener">Anime Facts Api</a></p>
 
-            <div class="iconContainer">
-                <a href="https://github.com/Project-2-Anime"><i class="fa-brands fa-github"></i></a>
-                <span class="sr-only">Link to creator's github page</span>
+        <div class="iconContainer">
+            <a href="https://github.com/Project-2-Anime"><i class="fa-brands fa-github"></i></a>
+            <span class="sr-only">Link to creator's github page</span>
 
-                <a href="#"><i class="fa-solid fa-desktop"></i></a>
-                <span class="sr-only">Link to personal webpage</span>
+            <a href="#"><i class="fa-solid fa-desktop"></i></a>
+            <span class="sr-only">Link to personal webpage</span>
 
-            </div>
         </div>
-        <!-- END wrapper -->
-    </footer>
-    <!-- LINK to JavaScript -->
-    <script src="scripts.js"></script>
-</body>
+    </div>
+    <!-- END wrapper -->
+</footer>
 
+    <!-- Linking to JS page -->
+    <script src="firstPageScript.js"></script>
+</body>
 </html>

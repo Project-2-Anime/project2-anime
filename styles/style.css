@@ -522,11 +522,12 @@ button {
   font-weight: bold;
   padding: 50px 150px;
   border-radius: 5%;
+  margin-top: 35px;
 }
 
 .starterMain {
   height: 65vh;
-  margin-top: 70px;
+  margin-top: 0px;
 }
 
 .pokemonLineup {
@@ -867,8 +868,8 @@ footer p {
             transform: scale(0.9);
   }
   .starterMain {
-    height: 65vh;
-    margin-top: 20px;
+    height: 70vh;
+    margin-top: 100px;
   }
   .iconContainer {
     display: -webkit-box;
