@@ -506,28 +506,29 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
+.starterHeader h1 {
+  margin: 0;
+}
 .starterHeader .starterTitle {
   font-size: 6rem;
-  margin-bottom: 30px;
 }
 .starterHeader a {
   font-size: 4rem;
   font-weight: bold;
   padding: 50px 150px;
   border-radius: 5%;
-  margin-top: 35px;
+  margin: 70px 0px 70px 0;
 }
 
 .starterMain {
-  height: 65vh;
-  margin-top: 0px;
+  height: 75vh;
 }
 
 .pokemonLineup {
@@ -768,11 +769,6 @@ footer p {
     width: 100%;
     margin: 20px 0 0 0;
   }
-  .animeSelect button {
-    margin-top: 20px;
-    font-size: 1rem;
-    padding: 10px 10px;
-  }
   .flexFact p {
     font-size: 1rem;
     line-height: 30px;
@@ -866,10 +862,6 @@ footer p {
 .starterHeader :focus {
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
-  }
-  .starterMain {
-    height: 70vh;
-    margin-top: 100px;
   }
   .iconContainer {
     display: -webkit-box;
