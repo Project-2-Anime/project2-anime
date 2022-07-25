@@ -127,7 +127,6 @@ app.getGiphy = (userGiphy) => {
     })
         .then(function (result) {
             app.displayGiphy(result.data);
-            // console.log(result.data)
             // append to our empty div
         })
 
