@@ -234,7 +234,7 @@ body {
   font-family: "Edu SA Beginner", cursive;
 }
 body p {
-  color: #000;
+  color: rgb(248, 234, 234);
   font-weight: normal;
   font-size: 1rem;
   line-height: 20px;
@@ -243,21 +243,21 @@ body p {
 
 h1 {
   font-family: "Permanent Marker", cursive;
-  color: #CD853F;
+  color: #FB8122;
   font-size: 3rem;
   text-align: center;
   margin: 100px 0 100px 0;
 }
 
 a {
-  color: #401c02;
+  color: #E1E2E2;
 }
 
 .skipLink {
   position: absolute;
   left: -2000px;
   top: 10px;
-  background-color: #fee685;
+  background-color: #1D2228;
   color: white;
   z-index: 10;
 }
@@ -272,7 +272,7 @@ a {
 }
 
 body {
-  background-color: #fee685;
+  background-color: #1D2228;
 }
 
 img {
@@ -295,7 +295,7 @@ ul {
 label {
   margin-left: 0px;
   font-size: 1.5rem;
-  color: #401c02;
+  color: #E1E2E2;
 }
 
 nav li {
@@ -308,42 +308,6 @@ nav li:hover,
 nav :focus {
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
-}
-
-@-webkit-keyframes akatsuki {
-  0% {
-    margin-top: 100px;
-  }
-  20%, 40%, 60%, 80% {
-    margin-left: 100px;
-  }
-  10%, 30%, 50%, 70%, 90% {
-    margin-left: 10px;
-  }
-  100% {
-    margin-left: 20px;
-  }
-}
-
-@keyframes akatsuki {
-  0% {
-    margin-top: 100px;
-  }
-  20%, 40%, 60%, 80% {
-    margin-left: 100px;
-  }
-  10%, 30%, 50%, 70%, 90% {
-    margin-left: 10px;
-  }
-  100% {
-    margin-left: 20px;
-  }
-}
-.flexChild .cloud {
-  -webkit-animation: akatsuki 10s ease-in-out infinite;
-          animation: akatsuki 10s ease-in-out infinite;
-  height: 200px;
-  width: 300px;
 }
 
 .logo {
@@ -373,12 +337,12 @@ li img:hover {
 .starterHeader :focus {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  color: #401c02;
-  background-color: #CD853F;
+  color: #E1E2E2;
+  background-color: #FB8122;
 }
 
 a:hover {
-  color: #CD853F;
+  color: #FB8122;
 }
 
 .fade {
@@ -614,8 +578,8 @@ input[type=checkbox] {
   opacity: 0;
 }
 input[type=checkbox]:focus + label {
-  border: 1px dotted #fee685;
-  color: #CD853F;
+  border: 1px dotted #1D2228;
+  color: #FB8122;
 }
 
 .showMe {
@@ -623,42 +587,93 @@ input[type=checkbox]:focus + label {
 }
 
 .flexParent {
+  margin: 0 auto;
+  width: 70vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 3px solid #FB8122;
+  border-radius: 40px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.flexParent .flexChild {
+  max-height: 600px;
+  border-radius: 40px;
+  max-width: 90%;
+  margin: 20px;
+}
+.flexParent .flexChild img {
+  width: 100%;
+  max-height: 500px;
+  height: inherit;
+  border-radius: 40px;
+}
+.flexParent .animeSelect form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.flexParent .animeSelect form label {
+  margin-bottom: 20px;
+}
+.flexParent .animeSelect form select {
+  max-width: 350px;
+  margin: 0 auto;
+  text-align: center;
+  height: 50px;
+  background-color: #FB8122;
+  border: 2px solid black;
+  border-radius: 40px;
+  padding: 10px;
+}
+.flexParent .mediaContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 100%;
-}
-.flexParent .flexChild {
-  margin: 10px 10px;
-  padding: 0;
-  width: calc(50% - 20px);
-}
-.flexParent .flexImg {
-  -ms-flex-preferred-size: 35%;
-      flex-basis: 35%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.flexChild {
-  max-height: 600px;
+.gifImgDiv {
+  margin: auto;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
 }
-.flexChild img {
-  width: 100%;
-  max-height: 500px;
-  height: inherit;
-}
-
-select {
-  width: 65%;
-  text-align: center;
-  margin-top: 20px;
-  height: 40px;
-  background-color: #CD853F;
-  border-radius: 40px;
+.gifImgDiv .gifImage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
 }
 
 .animeSelect {
@@ -670,21 +685,9 @@ select {
           transform: none;
 }
 
-.flexFact {
-  position: relative;
-}
-.flexFact img {
-  position: absolute;
-  top: -100px;
-  width: 40%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  height: 150px;
-}
-
 .factAnime {
-  border: 6px groove #401c02;
-  border-radius: 40%;
+  border: 6px groove #E1E2E2;
+  border-radius: 40px;
 }
 
 .flexFact p {
@@ -693,7 +696,7 @@ select {
   font-size: 1.5rem;
   line-height: 40px;
   letter-spacing: 2px;
-  color: #401c02;
+  color: #E1E2E2;
   padding: 30px;
 }
 
@@ -701,25 +704,29 @@ select {
   background-color: black;
 }
 
-.gifImage {
-  border: 1px solid black;
-}
-
 iframe {
   width: 100%;
   height: 400px;
 }
 
+.pikachu {
+  height: 20%;
+  width: 20%;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
 footer {
   margin-top: 50px;
   padding: 20px 10px;
-  background-color: #f4e2c6;
+  background-color: BLACK;
   opacity: 0.8;
   text-align: center;
   position: relative;
 }
 footer p {
   font-size: 1.2rem;
+  margin-top: 5px;
 }
 
 .iconContainer {
@@ -731,7 +738,7 @@ footer p {
       -ms-flex-direction: column;
           flex-direction: column;
   position: absolute;
-  bottom: 30px;
+  bottom: 1px;
 }
 .iconContainer i {
   font-size: 2rem;
@@ -739,19 +746,32 @@ footer p {
 }
 
 @media (max-width: 1000px) {
-  .animeSelect select {
-    width: 50%;
+  .flexParent .mediaContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .flexParent .animeSelect {
+    width: 100%;
+  }
+  .flexParent .animeSelect form {
+    width: 100%;
+  }
+  .flexParent .animeSelect select {
+    width: 100%;
     padding-top: 15px;
   }
-  .animeSelect button {
+  .flexParent .animeSelect button {
     font-size: 1.3rem;
     padding: 10px 10px;
   }
-  .flexFact p {
+  .flexParent .flexFact p {
     font-size: 1.2rem;
   }
-  label {
+  .flexParent label {
     font-size: 1.2rem;
+    text-align: center;
   }
   .starterHeader a {
     font-size: 2.5rem;
@@ -761,6 +781,9 @@ footer p {
   }
   .starterMain {
     margin-top: 200px;
+  }
+  .pokemonLineup {
+    top: 150px;
   }
 }
 @media (max-width: 700px) {
@@ -780,8 +803,37 @@ footer p {
     font-size: 2.5rem;
     padding: 50px 75px;
   }
-  footer p {
-    font-size: 1rem;
+  footer {
+    position: unset;
+  }
+  footer .footerContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .footerContainer .iconContainer {
+    position: unset;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .footerContainer .iconContainer a {
+    margin-right: 10px;
+  }
+  footer .footerContainer .iconContainer i {
+    font-size: 1.2rem;
+    margin: 5px 1px;
+  }
+  .pokemonLineup {
+    display: none;
   }
 }
 @media (max-width: 500px) {
@@ -810,7 +862,7 @@ footer p {
   }
   nav label[for=toggle] {
     position: fixed;
-    color: #401c02;
+    color: #E1E2E2;
     top: 10px;
     left: 15px;
     z-index: 5;
@@ -820,7 +872,7 @@ footer p {
     position: fixed;
     width: 100vw;
     right: -110%;
-    background-color: #fee685;
+    background-color: #1D2228;
     opacity: 0.95;
     height: 100vh;
     -webkit-transition: 0.5s;
@@ -863,22 +915,6 @@ footer p {
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
   }
-  .iconContainer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    position: absolute;
-    bottom: 1px;
-    left: 40%;
-  }
-  .iconContainer i {
-    font-size: 1.2rem;
-    margin: 5px 10px;
-  }
 }
 @media (max-width: 330px) {
   label {
@@ -903,22 +939,6 @@ footer p {
   }
   .starterHeader p {
     font-size: 0.8rem;
-  }
-  .iconContainer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    position: absolute;
-    bottom: 1px;
-    left: 35%;
-  }
-  .iconContainer i {
-    font-size: 1.2rem;
-    margin: 5px 10px;
   }
   footer p {
     font-size: 0.8rem;

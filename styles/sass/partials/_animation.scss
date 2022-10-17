@@ -10,39 +10,6 @@ nav{
     }
 }
 
-// INDEX PAGE CLOUD STYLES 
-@keyframes akatsuki {
-    0% {
-            margin-top: 100px;
-        }
-    
-        20%,
-        40%,
-        60%,
-        80% {
-            margin-left: 100px;
-        }
-    
-        10%,
-        30%,
-        50%,
-        70%,
-        90% {
-            margin-left: 10px;
-        }
-    
-        100% {
-          margin-left: 20px;
-        }
-}
-
-.flexChild{
-    .cloud{
-        animation: akatsuki 10s ease-in-out infinite;
-        height: 200px;
-        width: 300px;
-    }
-}
 .logo{
     transition: transform 0.8s;
 }

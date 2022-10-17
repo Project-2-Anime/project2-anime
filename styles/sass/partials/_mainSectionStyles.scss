@@ -1,40 +1,71 @@
 // STARTER PAGE MAIN SECTION
+
 .flexParent{
+    margin: 0 auto;
+    width: 70vw;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-    .flexChild{
-        margin: 10px 10px;
-        padding: 0;
-        width: calc((100% / 2) - 20px);
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid $secondary;
+    border-radius: 40px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    .flexChild {
+        max-height: 600px;
+        border-radius: 40px;
+        max-width: 90%;
+        margin: 20px;
+        img{
+            width: 100%;
+            max-height: 500px;
+            height: inherit;
+            border-radius: 40px;
+        }
     }
 
-    .flexImg{
-        flex-basis: 35%;
+    .animeSelect{
+        form{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            label{
+                margin-bottom: 20px;
+            }
+            select{
+                max-width: 350px;
+                margin: 0 auto;
+                text-align: center;
+                height: 50px;
+                background-color: $secondary;
+                border: 2px solid black;
+                border-radius: 40px;
+                padding: 10px;
+
+            }
+        }
+    }
+    .mediaContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
-.flexChild{
-    max-height: 600px;
-
-    img{
-        width: 100%;
-        max-height: 500px;
-        height: inherit;
+.gifImgDiv{
+    margin: auto;
+    max-height: fit-content;
+    .gifImage{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-height: fit-content;
     }
 }
+
+
+// 
 
 // STARTER PAGE Select FORM styles 
-
-select{
-    width: 65%;
-    text-align: center;
-    margin-top: 20px;
-    height: 40px;
-    background-color: $secondary;
-    border-radius: 40px;
-}
 
 .animeSelect{
     background-color: transparent;
@@ -46,20 +77,9 @@ select{
 
 // style for the anime facts 
 
-.flexFact{
-    position: relative;
-    img{
-        position: absolute;
-        top: -100px;
-        width: 40%;
-        object-fit: contain;
-        height: 150px; 
-    }
-}
-
 .factAnime{
     border: 6px groove $tertiary;
-    border-radius: 40%;
+    border-radius: 40px;
 }
 
 .flexFact p{
@@ -76,10 +96,15 @@ select{
 .gifImgLi{
     background-color: black;
 }
-.gifImage{
-    border: 1px solid black;
-}
+
 iframe{
     width: 100%;
     height: 400px;
+}
+
+.pikachu{
+    height: 20%;
+    width: 20%;
+    margin-left: 10px;
+    margin-top: 10px;
 }

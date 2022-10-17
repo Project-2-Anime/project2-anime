@@ -160,10 +160,7 @@ app.displayImage = function (imgSelected,altSource) {
 }
 // 23. Created a method to display our anime facts and append to the div
 app.displayFacts = function(factSelected){
-    // made a varible to hold our created p element
-    // const factEl = document.createElement('p');
     app.animeFacts.innerText = factSelected;
-    // app.animeFacts.append(factEl);
 }
 
 // START EVENT LISTENER FOR MAIN PAGE

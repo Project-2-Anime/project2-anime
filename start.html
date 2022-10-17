@@ -59,58 +59,56 @@
         <section>
             <ul class="flexParent">
                 <li class="flexChild animeSelect">
-                    <div>
-                        <label for="anime">Please select the Anime Name from the dropdown menu:</label>
+                    <form>
+                        <label for="anime">Select an Anime from the dropdown menu below</label>
                         <select name="anime" id="anime">
                             <!-- anime names to be shown through JavaScript -->
                             <option value="xxx" disabled selected> Choose an Anime </option>
                             <option value="0,bleach,bleach">Bleach</option>
                             <option value="1,black_clover,black clover">Black Clover</option>
                             <option value="2,dragon_ball, dragon ball">Dragon Ball</option>
-                            <!-- <option value="3, jujutsu_kaisen">Jujutsu Kaisen</option> -->
                             <option value="4,fma_brotherhood, full metal Alchemist fight">Fullmetal Alchemist: Brotherhood</option>
                             <option value="5,naruto, naruto small">Naruto</option>
                             <option value="6,gintama, gintama">Gintama</option>
                             <option value="7,itachi_uchiha, itachi otaku">Itachi Uchiha</option>
-                            <option value="8,one_piece, one piece">One Piece</option>
+                            <option value="8,one_piece, one piece_strawhats">One Piece</option>
                             <option value="9,demon_slayer, demon slayer">Demon Slayer</option>
                             <option value="10,attack_on_titan, attack on titan wallpaper">Attack on Titan</option>
                             <option value="11,hunter_x_hunter, hunter x hunter fight">Hunter x Hunter</option>
                             <option value="12,boku_no_hero_academia, my hero academia fight">My Hero Academia</option>
                         </select>
-                    </div>
-                    <img src="./assets/akatsuki.cloud.png" alt="The symbol for the Akatsuki clan from the show Naruto" class="cloud"
-                    >
+                    </form>
+                    <!-- <img src="./assets/akatsuki.cloud.png" alt="The symbol for the Akatsuki clan from the show Naruto" class="cloud"/> -->
                 </li>
 
-                <li class="flexChild flexImg">
-                    <div id="animePicture">
-                        <!-- Empty div where image will append -->
-                        <img src="./assets/goku-pngwing.com.png" alt="A Picture of Goku">
+                <li class="mediaContainer"> 
+                    <div class="flexChild flexImg">
+                        <div id="animePicture" class="animePic">
+                            <!-- Empty div where image will append -->
+                            <img src="./assets/goku-pngwing.com.png" alt="A Picture of Goku">
+                        </div>
+                    </div>
+
+                    <div class="flexChild flexImg gifImgDiv">
+                        <div id="giphyImage" class="gifImage">
+                            <!-- Empty div where random Giphy GIF will append  -->
+                            <iframe src="https://giphy.com/embed/ayMW3eqvuP00o" frameBorder="0" class="giphy-embed"
+                            allowFullScreen></iframe>   
+                        </div>
                     </div>
                 </li>
 
                 <li class="flexChild flexFact">
-                    <img src="./assets/pikachesitting.png" alt="A picture of Pikachu sitting down">
                     <div class="factAnime">
                         <!-- Empty div where random fact will append -->
                         <p id="factDisplay">A fun fact of the Anime you selected will be displayed here!</p>
-
-                    </div>
-                </li>
-
-                <li class="flexChild flexImg gifImgLi">
-                    <div id="giphyImage" class="gifImage">
-                        <!-- Empty div where random Giphy GIF will append  -->
-                    <iframe src="https://giphy.com/embed/ayMW3eqvuP00o" frameBorder="0" class="giphy-embed"
-                        allowFullScreen></iframe>
-                        
+                                
                     </div>
                 </li>
             </ul>
-        </section>
-        </section>
 
+            <img class="pikachu" src="./assets/pikachesitting.png" alt="A picture of Pikachu sitting down">
+        </section>
     </main>
 
     <!-- START footer -->
@@ -124,15 +122,19 @@
 
             <p>Data courtesy to <a href="https://developers.giphy.com/" target="_blank" rel="noopener">Giphy Api</a></p>
 
-            <p>Data courtesy to <a href="https://chandan-02.github.io/anime-facts-rest-api/" target="_blank"
-                    rel="noopener">Anime Facts Api</a></p>
+            <p>Data courtesy to <a href="https://chandan-02.github.io/anime-facts-rest-api/" target="_blank" rel="noopener">Anime Facts Api</a></p>
 
             <div class="iconContainer">
-                <a href="https://github.com/Project-2-Anime"><i class="fa-brands fa-github"></i></a>
+                <a href="https://github.com/Project-2-Anime" target="_blank"
+                    rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
                 <span class="sr-only">Link to creator's github page</span>
 
-                <a href="#"><i class="fa-solid fa-desktop"></i></a>
-                <span class="sr-only">Link to personal webpage</span>
+                <a href="https://www.elijahwalkerdev.com/" target="_blank"
+                    rel="noopener"><i class="fa-solid fa-desktop"></i> Elijah</a>
+                <span class="sr-only">Link to Elijah's personal webpage</span>
+
+                <a href="https://github.com/jxu710" target="_blank" rel="noopener"><i class="fa-solid fa-desktop"></i> Jingru</a>
+                <span class="sr-only">Link to Jingru's GitHub</span>
 
             </div>
         </div>

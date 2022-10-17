@@ -1,24 +1,35 @@
 @media (max-width: 1000px){
     // media queries for START.html
-    .animeSelect{
-        select{
-            width: 50%;
-            padding-top: 15px;
+
+    .flexParent{
+        .mediaContainer{
+            flex-direction: column;
         }
-
-        button{
-            font-size: 1.3rem;
-            padding: 10px 10px;
+        .animeSelect{
+            width: 100%;
+            form{
+                width: 100%;
+            }
+            select{
+                width: 100%;
+                padding-top: 15px;
+            }
+            
+            button{
+                font-size: 1.3rem;
+                padding: 10px 10px;
+            }
         }
-    }
-
-    .flexFact p{
-        font-size: 1.2rem;
-    }
-
-    label{
-        font-size: 1.2rem;
-    }
+    
+        .flexFact p{
+            font-size: 1.2rem;
+        }
+    
+        label{
+            font-size: 1.2rem;
+            text-align: center;
+        }
+}
     // media queries for index.html
     .starterHeader{
         a {
@@ -29,9 +40,13 @@
         }
     }
 
-        .starterMain {
-            margin-top: 200px;
-        }
+    .starterMain {
+        margin-top: 200px;
+    }
+
+    .pokemonLineup{
+        top: 150px;
+    }
 }
 
 @media(max-width:700px){
@@ -60,8 +75,28 @@
         padding: 50px 75px;
     }
 
-    footer p{
-        font-size: 1rem;
+    footer{
+        position: unset;
+        .footerContainer{
+            display: flex;
+            flex-direction: column;
+            .iconContainer {
+                position: unset;
+                flex-direction: row;
+                justify-content: center;
+                a{
+                    margin-right: 10px;
+                }
+                i {
+                    font-size: 1.2rem;
+                    margin: 5px 1px;
+                }
+            }
+        }
+    }
+
+    .pokemonLineup {
+        display: none;
     }
 }
 
@@ -154,18 +189,6 @@
         }
     }
     
-    .iconContainer {
-        display: flex;
-        flex-direction: row;
-        position: absolute;
-        bottom: 1px;
-        left: 40%;
-    
-        i {
-            font-size: 1.2rem;
-            margin: 5px 10px;
-        }
-    }
 }
 
 @media(max-width:330px){
@@ -198,19 +221,6 @@
             font-size: 0.8rem;
         }
     } 
-
-    .iconContainer {
-        display: flex;
-        flex-direction: row;
-        position: absolute;
-        bottom: 1px;
-        left: 35%;
-    
-        i {
-            font-size: 1.2rem;
-            margin: 5px 10px;
-        }
-    }
 
     footer p {
         font-size: 0.8rem;
